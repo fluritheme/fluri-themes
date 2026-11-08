@@ -8,11 +8,11 @@ importers:
   .:
     dependencies:
       "@fluritheme/fluri":
-        specifier: 0.1.0
-        version: 0.1.0
+        specifier: 0.1.1
+        version: 0.1.1
       "@fluritheme/spider":
-        specifier: 0.1.3
-        version: 0.1.3
+        specifier: 0.1.4
+        version: 0.1.4
     devDependencies:
       "@playwright/test":
         specifier: 1.64.1
@@ -348,16 +348,16 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@fluritheme/fluri@0.1.0":
+  "@fluritheme/fluri@0.1.1":
     resolution:
       {
-        integrity: sha512-ETeTuNCmv163/WDq3BsDNtkNdVp13A/6QQTbz2GQogXNn5z2kv7PZdfn5w+GdyCEhpr7z3Gtdafh73j6KYy8hw==,
+        integrity: sha512-gzPoVDV+WxSUs2SiKG1B3dOqTD3xuMqm8TGXAkKUadK5ZaXVhPzs2QmHoTnLx6PfdTkJ/Ox9Rp2r0kmDDecXwA==,
       }
 
-  "@fluritheme/spider@0.1.3":
+  "@fluritheme/spider@0.1.4":
     resolution:
       {
-        integrity: sha512-I6CH6AaimYg1f2CB7kqfeBOG9OJm8IV0T8pbSK7q5ULWlLS0RZBUG1WbvAW650RIINcgpwISEYgIXVXXtELDVw==,
+        integrity: sha512-oMaqQ1mdj1wEfSX/XmebqSuSG+eD35Jv4CO8meD2XQJIA250z/ygf8tUMlN2JhljwzjcGLlNSYtQajz0GvxGWA==,
       }
     engines: { node: ">=22.12" }
 
@@ -1518,11 +1518,11 @@ snapshots:
   "@esbuild/win32-x64@0.28.2":
     optional: true
 
-  "@fluritheme/fluri@0.1.0":
+  "@fluritheme/fluri@0.1.1":
     dependencies:
       zod: 4.6.7
 
-  "@fluritheme/spider@0.1.3": {}
+  "@fluritheme/spider@0.1.4": {}
 
   "@img/colour@1.1.0": {}
 

@@ -31,3 +31,7 @@ During cutover, first deploy Winter with both hostnames temporarily attached, th
 ## Artwork
 
 Founder portrait and brand mark were supplied by the founder. Original full-resolution PNGs are retained; web-sized derivatives are used for transfer efficiency. Self-hosted fonts retain the licenses in `public/fonts`. The live theme panels run the actual packages. No founder achievements, customer counts or testimonials are invented.
+
+## Distribution and discoverability
+
+All three packages are published on npm and JSR. See [verified registry, CDN and directory links](docs/distribution.md), including search submissions and their limits. The public [founder biography](https://fluri.xyz/founder/) connects the projects to František Gejdoš.

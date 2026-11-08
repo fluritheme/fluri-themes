@@ -100,3 +100,41 @@ test("privacy has its own canonical content and no decorative worlds", async ({
   );
   await expect(page.locator("#winter-scene")).toHaveCount(0);
 });
+
+test("founder biography is crawlable and links the real projects and identity", async ({
+  page,
+}) => {
+  await page.goto("/founder/");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+    /FRANTIŠEK\s+GEJDOŠ/,
+  );
+  await expect(page.locator("link[rel=canonical]")).toHaveAttribute(
+    "href",
+    "https://fluri.xyz/founder/",
+  );
+  const graph = await page
+    .locator('script[type="application/ld+json"]')
+    .textContent();
+  const entities = JSON.parse(graph ?? "{}")["@graph"];
+  expect(
+    entities.find(
+      (entity: Record<string, string>) => entity["@type"] === "Person",
+    ).alternateName,
+  ).toBe("Frantisek Gejdos");
+  expect(
+    entities.find(
+      (entity: Record<string, string>) => entity["@type"] === "Organization",
+    ).founder["@id"],
+  ).toBe("https://fluri.xyz/#founder");
+  await expect(
+    page.getByRole("link", { name: "Winter ↗", exact: true }),
+  ).toHaveAttribute("href", "https://winter.fluri.xyz/");
+  await expect(
+    page.getByRole("link", { name: "Spider ↗", exact: true }),
+  ).toHaveAttribute("href", "https://spider.fluri.xyz/");
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+});

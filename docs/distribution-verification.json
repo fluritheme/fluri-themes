@@ -1,0 +1,152 @@
+{
+  "checkedOn": "2026-11-08",
+  "registryAndCdnChecks": [
+    {
+      "package": "@fluritheme/fluri",
+      "version": "0.1.1",
+      "service": "npm",
+      "url": "https://registry.npmjs.org/@fluritheme%2ffluri/0.1.1",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/fluri",
+      "version": "0.1.1",
+      "service": "JSR",
+      "url": "https://jsr.io/@fluritheme/fluri/meta.json",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/fluri",
+      "version": "0.1.1",
+      "service": "jsDelivr",
+      "url": "https://cdn.jsdelivr.net/npm/@fluritheme/fluri@0.1.1/package.json",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/fluri",
+      "version": "0.1.1",
+      "service": "UNPKG",
+      "url": "https://unpkg.com/@fluritheme/fluri@0.1.1/package.json",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/fluri",
+      "version": "0.1.1",
+      "service": "esm.sh",
+      "url": "https://esm.sh/@fluritheme/fluri@0.1.1",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/fluri-react",
+      "version": "0.1.1",
+      "service": "npm",
+      "url": "https://registry.npmjs.org/@fluritheme%2ffluri-react/0.1.1",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/fluri-react",
+      "version": "0.1.1",
+      "service": "JSR",
+      "url": "https://jsr.io/@fluritheme/fluri-react/meta.json",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/fluri-react",
+      "version": "0.1.1",
+      "service": "jsDelivr",
+      "url": "https://cdn.jsdelivr.net/npm/@fluritheme/fluri-react@0.1.1/package.json",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/fluri-react",
+      "version": "0.1.1",
+      "service": "UNPKG",
+      "url": "https://unpkg.com/@fluritheme/fluri-react@0.1.1/package.json",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/fluri-react",
+      "version": "0.1.1",
+      "service": "esm.sh",
+      "url": "https://esm.sh/@fluritheme/fluri-react@0.1.1",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/spider",
+      "version": "0.1.4",
+      "service": "npm",
+      "url": "https://registry.npmjs.org/@fluritheme%2fspider/0.1.4",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/spider",
+      "version": "0.1.4",
+      "service": "JSR",
+      "url": "https://jsr.io/@fluritheme/spider/meta.json",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/spider",
+      "version": "0.1.4",
+      "service": "jsDelivr",
+      "url": "https://cdn.jsdelivr.net/npm/@fluritheme/spider@0.1.4/package.json",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/spider",
+      "version": "0.1.4",
+      "service": "UNPKG",
+      "url": "https://unpkg.com/@fluritheme/spider@0.1.4/package.json",
+      "status": 200
+    },
+    {
+      "package": "@fluritheme/spider",
+      "version": "0.1.4",
+      "service": "esm.sh",
+      "url": "https://esm.sh/@fluritheme/spider@0.1.4",
+      "status": 200
+    }
+  ],
+  "indexNowReceipts": [
+    {
+      "host": "fluri.xyz",
+      "status": 202,
+      "urls": [
+        "https://fluri.xyz/",
+        "https://fluri.xyz/privacy/",
+        "https://fluri.xyz/founder/"
+      ],
+      "response": ""
+    },
+    {
+      "host": "spider.fluri.xyz",
+      "status": 202,
+      "urls": [
+        "https://spider.fluri.xyz/",
+        "https://spider.fluri.xyz/privacy/"
+      ],
+      "response": ""
+    },
+    {
+      "host": "winter.fluri.xyz",
+      "status": 202,
+      "urls": [
+        "https://winter.fluri.xyz/participate/",
+        "https://winter.fluri.xyz/community/",
+        "https://winter.fluri.xyz/",
+        "https://winter.fluri.xyz/features/",
+        "https://winter.fluri.xyz/showcase/",
+        "https://winter.fluri.xyz/docs/",
+        "https://winter.fluri.xyz/about/",
+        "https://winter.fluri.xyz/changelog/",
+        "https://winter.fluri.xyz/privacy/",
+        "https://winter.fluri.xyz/terms/",
+        "https://winter.fluri.xyz/cookies/",
+        "https://winter.fluri.xyz/license/",
+        "https://winter.fluri.xyz/playground/"
+      ],
+      "response": ""
+    }
+  ],
+  "note": "HTTP success and submission receipts are not proof of search indexing or endorsement."
+}
