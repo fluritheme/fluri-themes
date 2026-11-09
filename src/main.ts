@@ -60,6 +60,11 @@ async function mount(theme: Theme): Promise<void> {
           particleCount: 140,
           accumulation: { maxDepth: 14, growthRate: 0.6 },
         },
+        interactions: {
+          snowballs: { enabled: true },
+          snowman: { enabled: true },
+          yeti: { enabled: true },
+        },
         performance: { maxDPR: 1.5, maxFPS: 45 },
         accessibility: { reducedMotion: "respect" },
       });
