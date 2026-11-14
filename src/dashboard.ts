@@ -8,6 +8,7 @@ const labels: Record<string, string> = {
   "grinch.fluri.xyz": "Grinch",
   "cat.fluri.xyz": "Black Cat",
   "ghost.fluri.xyz": "Ghost",
+  "rain.fluri.xyz": "Rainy Window",
 };
 let data: Traffic | undefined,
   selected = "all",

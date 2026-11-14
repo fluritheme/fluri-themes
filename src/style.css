@@ -1309,3 +1309,19 @@ img {
 .ghost-world .world-bottom {
   border-color: #27213745;
 }
+
+.rain-world {
+  background: #174b3d;
+  color: #eef2d8;
+}
+.rain-world .world-stage h2 {
+  font-size: clamp(64px, 14vw, 220px);
+}
+.rain-world .world-enter {
+  background: #174b3d;
+  border-color: #d8f7a880;
+}
+.rain-world .world-enter:hover {
+  background: #d8f7a8;
+  color: #173b30;
+}

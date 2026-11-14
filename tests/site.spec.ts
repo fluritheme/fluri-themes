@@ -228,3 +228,30 @@ test("Ghost loads a scoped preview and links its live playground", async ({
   ).toBe(true);
   expect(errors).toEqual([]);
 });
+
+test("Rainy Window immediately mounts its scoped glass and links the playground", async ({
+  page,
+}) => {
+  const errors: string[] = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  await page.goto("/#rainy-window");
+  await expect(
+    page.getByRole("heading", { name: "rainy window.", exact: true }),
+  ).toBeVisible();
+  const canvas = page.locator("#rain-scene canvas[data-fluri-rainy-window]");
+  await expect(canvas).toHaveCount(1);
+  expect(
+    await canvas.evaluate(
+      (c: HTMLCanvasElement) => c.width > 0 && c.height > 0,
+    ),
+  ).toBe(true);
+  await expect(
+    page.getByRole("link", { name: "LET A LITTLE RAIN IN" }),
+  ).toHaveAttribute("href", "https://rain.fluri.xyz/");
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  expect(errors).toEqual([]);
+});

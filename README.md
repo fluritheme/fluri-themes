@@ -6,6 +6,7 @@ The collection and founder website at [fluri.xyz](https://fluri.xyz/), built wit
 - [Spider](https://spider.fluri.xyz/) · [source](https://github.com/fluritheme/spider)
 - [Grinch](https://grinch.fluri.xyz/) · [source](https://github.com/fluritheme/grinch)
 - [Black Cat](https://cat.fluri.xyz/) · [npm](https://www.npmjs.com/package/@fluritheme/black-cat)
+- [Rainy Window](https://rain.fluri.xyz/) · [npm](https://www.npmjs.com/package/@fluritheme/rainy-window)
 - [Ghost](https://ghost.fluri.xyz/) · [npm](https://www.npmjs.com/package/@fluritheme/ghost)
 - [Founder](https://fluri.xyz/founder/)
 

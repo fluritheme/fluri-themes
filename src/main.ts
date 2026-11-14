@@ -1,18 +1,20 @@
 import "./style.css";
 import type { WeatherController } from "@fluritheme/fluri";
 import type { GrinchController } from "@fluritheme/grinch";
+import type { RainyWindowController } from "@fluritheme/rainy-window";
 import type { GhostController } from "@fluritheme/ghost";
 import type { CatController } from "@fluritheme/black-cat";
 import type { SpiderController } from "@fluritheme/spider";
 type Theme = {
   element: HTMLElement;
-  type: "winter" | "spider" | "grinch" | "cat" | "ghost";
+  type: "winter" | "spider" | "grinch" | "cat" | "ghost" | "rain";
   controller?:
     | WeatherController
     | SpiderController
     | GrinchController
     | CatController
-    | GhostController;
+    | GhostController
+    | RainyWindowController;
   visible: boolean;
   loading: boolean;
 };
@@ -27,6 +29,7 @@ for (const [id, type] of [
   ["grinch-scene", "grinch"],
   ["cat-scene", "cat"],
   ["ghost-scene", "ghost"],
+  ["rain-scene", "rain"],
 ] as const) {
   const element = document.getElementById(id);
   if (element) themes.push({ element, type, visible: false, loading: false });
@@ -104,6 +107,16 @@ async function mount(theme: Theme): Promise<void> {
         fearRadius: 100,
         speed: 1.3,
         zIndex: 4,
+      });
+    } else if (theme.type === "rain") {
+      const { createRainyWindow } = await import("@fluritheme/rainy-window");
+      if (destroyed) return;
+      theme.controller = createRainyWindow({
+        root: theme.element,
+        preset: "rain",
+        maxDrops: 180,
+        seed: 27,
+        zIndex: 3,
       });
     } else if (theme.type === "ghost") {
       const { createGhost } = await import("@fluritheme/ghost");

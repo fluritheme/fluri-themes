@@ -28,6 +28,15 @@
     "@fluritheme/grinch": {
       "lastMIT": "0.1.1",
       "firstCommercial": "0.2.0"
+    },
+    "@fluritheme/black-cat": {
+      "firstCommercial": "0.1.0"
+    },
+    "@fluritheme/ghost": {
+      "firstCommercial": "0.1.0"
+    },
+    "@fluritheme/rainy-window": {
+      "firstCommercial": "0.1.0"
     }
   }
 }

@@ -6,6 +6,7 @@ const hosts = [
     "grinch.fluri.xyz",
     "cat.fluri.xyz",
     "ghost.fluri.xyz",
+    "rain.fluri.xyz",
   ],
   reports = [];
 for (const host of hosts) {

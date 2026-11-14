@@ -94,7 +94,7 @@ it("counts public HTML without recording identity, queries or opt-outs", async (
     observe(browser(), new Response("missing", { status: 404 })),
   ).toBeNull();
 });
-it("combines all six sites and preserves historical legacy counts without package calls", async () => {
+it("combines all seven sites and preserves historical legacy counts without package calls", async () => {
   const CENTRAL_DB = database(),
     WINTER_DB = database(true),
     SPIDER_DB = database(true);
@@ -128,7 +128,7 @@ it("combines all six sites and preserves historical legacy counts without packag
   });
   const r = await readTraffic({ CENTRAL_DB, WINTER_DB, SPIDER_DB }, 30);
   expect(r.totals.views).toBe(16);
-  expect(r.sites.map((s) => s.views)).toEqual([1, 5, 7, 1, 1, 1]);
+  expect(r.sites.map((s) => s.views)).toEqual([1, 5, 7, 1, 1, 1, 0]);
   expect(r.sites[1]?.startedAt).toBe("2026-11-08T00:00:00Z");
   expect(r).not.toHaveProperty("packages");
 });

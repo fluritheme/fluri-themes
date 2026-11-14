@@ -32,7 +32,7 @@
             "alternateName": "Frantisek Gejdos",
             "url": "https://fluri.xyz/founder/",
             "image": "https://fluri.xyz/founder-1200.jpg",
-            "description": "Founder of Fluri Themes and creator of the interactive Winter, Spider, Grinch, Black Cat and Ghost website effects.",
+            "description": "Founder of Fluri Themes and creator of the interactive Winter, Spider, Grinch, Black Cat, Ghost and Rainy Window website effects.",
             "jobTitle": "Founder of Fluri Themes",
             "worksFor": { "@id": "https://fluri.xyz/#organization" },
             "sameAs": [
@@ -87,6 +87,11 @@
                   "@type": "ListItem",
                   "position": 5,
                   "item": { "@id": "https://ghost.fluri.xyz/#software" }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
+                  "item": { "@id": "https://rain.fluri.xyz/#software" }
                 }
               ]
             }
@@ -193,6 +198,26 @@
               "Fluri Themes"
             ],
             "downloadUrl": "https://www.npmjs.com/package/@fluritheme/ghost"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://rain.fluri.xyz/#software",
+            "name": "Rainy Window by Fluri",
+            "url": "https://rain.fluri.xyz/",
+            "description": "Transparent rain droplets that merge and run down the glass, with fading trails and pointer wiping.",
+            "programmingLanguage": "TypeScript",
+            "license": "https://fluri.xyz/license/",
+            "author": { "@id": "https://fluri.xyz/#founder" },
+            "publisher": { "@id": "https://fluri.xyz/#organization" },
+            "downloadUrl": "https://www.npmjs.com/package/@fluritheme/rainy-window",
+            "runtimePlatform": "Web browser",
+            "keywords": [
+              "interactive website effects",
+              "JavaScript website animations",
+              "React website effects",
+              "František Gejdoš",
+              "Fluri Themes"
+            ]
           }
         ]
       }
@@ -201,7 +226,7 @@
     <link rel="canonical" href="https://fluri.xyz/" />
     <meta
       name="description"
-      content="Little details. A little delight. Explore Winter, Spider, Grinch, Black Cat and Ghost: interactive website effects by František Gejdoš, founder of Fluri Themes."
+      content="Little details. A little delight. Explore Winter, Spider, Grinch, Black Cat, Ghost and Rainy Window: interactive website effects by František Gejdoš, founder of Fluri Themes."
     />
     <meta
       name="robots"
@@ -216,7 +241,7 @@
     />
     <meta
       property="og:description"
-      content="Little details. A little delight. Explore Winter, Spider, Grinch, Black Cat and Ghost: interactive website effects by František Gejdoš, founder of Fluri Themes."
+      content="Little details. A little delight. Explore Winter, Spider, Grinch, Black Cat, Ghost and Rainy Window: interactive website effects by František Gejdoš, founder of Fluri Themes."
     />
     <meta property="og:url" content="https://fluri.xyz/" />
     <meta property="og:image" content="https://fluri.xyz/social.png" />
@@ -233,7 +258,7 @@
     />
     <meta
       name="twitter:description"
-      content="Little details. A little delight. Explore Winter, Spider, Grinch, Black Cat and Ghost: interactive website effects by František Gejdoš, founder of Fluri Themes."
+      content="Little details. A little delight. Explore Winter, Spider, Grinch, Black Cat, Ghost and Rainy Window: interactive website effects by František Gejdoš, founder of Fluri Themes."
     />
     <meta name="twitter:image" content="https://fluri.xyz/social.png" />
   </head>
@@ -250,7 +275,7 @@
         /><span>fluri<span>THEMES</span></span></a
       >
       <nav aria-label="Main navigation">
-        <a href="#themes">THE THEMES <sup>05</sup></a
+        <a href="#themes">THE THEMES <sup>06</sup></a
         ><a href="#founder">THE MAKER</a
         ><button type="button" id="motion-toggle" aria-pressed="false">
           Ⅱ PAUSE MOTION</button
@@ -469,8 +494,37 @@
           ><a href="/license/">ALL THEMES / €19 ↗</a>
         </div>
       </section>
+      <section
+        class="theme-world rain-world"
+        id="rainy-window"
+        aria-labelledby="rain-title"
+      >
+        <div class="world-meta">
+          <span>06 / RAINY WINDOW</span
+          ><span>A LITTLE OUTSIDE. ON THE INSIDE.</span
+          ><span>LIFETIME LICENCE ↗</span>
+        </div>
+        <div class="world-stage" id="rain-scene">
+          <h2 id="rain-title">rainy window.</h2>
+          <div class="world-story">
+            <p>A QUIETER MOMENT.<br />A DIFFERENT KIND OF MAGIC.</p>
+            <p>
+              Tiny beads gather. Streams find their way down. Wipe the glass and
+              watch the weather return.
+            </p>
+          </div>
+          <a class="world-enter" href="https://rain.fluri.xyz/"
+            >LET A LITTLE RAIN IN <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="world-bottom">
+          <span>MERGING DROPLETS / WANDERING STREAMS / WIPE THE GLASS</span
+          ><a href="https://rain.fluri.xyz/#playground">TRY RAINY WINDOW ↗</a
+          ><a href="/license/">ALL THEMES / €19 ↗</a>
+        </div>
+      </section>
       <section class="manifesto">
-        <span class="section-id">THE FLURI IDEA / 06</span>
+        <span class="section-id">THE FLURI IDEA / 07</span>
         <h2>THE WEB CAN<br />USE A LITTLE<br /><span>PERSONALITY.</span></h2>
         <div>
           <span class="asterisk" aria-hidden="true">✳</span>
@@ -518,10 +572,10 @@
               makes you stop, move your cursor, and play for a moment.
             </p>
             <p>
-              Winter, Spider, Grinch, Black Cat and Ghost are the start of Fluri
-              Themes. Try every theme here, then get one lifetime licence for
-              your personal and client websites. And follow along for whatever
-              comes next.
+              Winter, Spider, Grinch, Black Cat, Ghost and Rainy Window are the
+              start of Fluri Themes. Try every theme here, then get one lifetime
+              licence for your personal and client websites. And follow along
+              for whatever comes next.
             </p>
             <p>
               <a class="text-link" href="/founder/">ABOUT FRANTIŠEK GEJDOŠ ↗</a>
@@ -570,6 +624,7 @@
         ><a href="https://grinch.fluri.xyz/">GRINCH ↗</a
         ><a href="https://spider.fluri.xyz/">SPIDER ↗</a
         ><a href="https://github.com/fluritheme">GITHUB ↗</a
+        ><a href="https://rain.fluri.xyz/">RAINY WINDOW ↗</a
         ><a href="https://ghost.fluri.xyz/">GHOST ↗</a
         ><a href="https://cat.fluri.xyz/">BLACK CAT ↗</a
         ><a href="/license/">LICENCE</a><a href="/privacy/">PRIVACY</a>
