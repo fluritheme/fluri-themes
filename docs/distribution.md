@@ -40,3 +40,16 @@ Grinch now has a [public source repository](https://github.com/fluritheme/grinch
 The Google domain property covers all four hosts. All four sitemap URLs were submitted, then independently fetched successfully through Google's live URL test, with crawling allowed. The Sitemaps report still shows “Could not fetch”; no XML or live-access failure was found, and Google reports no manual actions. Do not label this report successful until Google confirms processing.
 
 Bing ownership was verified for all four hosts and all four sitemaps show Success, with 23 discovered pages in total and no reported errors or warnings. IndexNow accepted all 23 canonical public URLs with HTTP 200 in the final check. [Search verification record](search-console-verification.json).
+
+## npm Homepage update — 14 November 2026
+
+All four packages now use https://fluri.xyz/ as their npm Homepage. The public registry and each installed archive were checked. Theme-specific README demo, preview-image and documentation URLs are preserved.
+
+| Package                   | npm version | Homepage           |
+| ------------------------- | ----------- | ------------------ |
+| `@fluritheme/fluri`       | 0.2.1       | https://fluri.xyz/ |
+| `@fluritheme/fluri-react` | 0.2.1       | https://fluri.xyz/ |
+| `@fluritheme/spider`      | 0.2.1       | https://fluri.xyz/ |
+| `@fluritheme/grinch`      | 0.1.1       | https://fluri.xyz/ |
+
+These are metadata-only npm releases; the animation code is unchanged. The historical JSR table above is a separate distribution record. [Verified npm metadata](npm-homepages.json).

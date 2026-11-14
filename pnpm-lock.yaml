@@ -8,14 +8,14 @@ importers:
   .:
     dependencies:
       "@fluritheme/fluri":
-        specifier: 0.2.0
-        version: 0.2.0
+        specifier: 0.2.1
+        version: 0.2.1
       "@fluritheme/grinch":
-        specifier: 0.1.0
-        version: 0.1.0
+        specifier: 0.1.1
+        version: 0.1.1
       "@fluritheme/spider":
-        specifier: 0.2.0
-        version: 0.2.0
+        specifier: 0.2.1
+        version: 0.2.1
     devDependencies:
       "@playwright/test":
         specifier: 1.64.1
@@ -351,23 +351,23 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@fluritheme/fluri@0.2.0":
+  "@fluritheme/fluri@0.2.1":
     resolution:
       {
-        integrity: sha512-fVKJRnQMfYWs2H/sA4si+awdwA2ywslszByK1OXIJUGCGM9/cdhbHv5MsljT2KgZPAj9mjWDr74hXjN/6Tw8bA==,
+        integrity: sha512-WdQKz8okOPscD7N3VxIE1SJasn1CAAEtyGuPwTQw6cmIlGiH8WII3zlI8s821CUqeU34yegopH0QcPprcPPhVA==,
       }
 
-  "@fluritheme/grinch@0.1.0":
+  "@fluritheme/grinch@0.1.1":
     resolution:
       {
-        integrity: sha512-M0rOpIFYcevC7fFqy51ozSl7nTZyFD+eTRVY8ujVPjCwmW2W2bJQXPCCwL35FFDVFYQeIKADrKr2O18NnpFKwA==,
+        integrity: sha512-Bum5h10kRMiUl0zvFIiJDPrfmb3zFWkXnbjL6BPUtIPcl0pA5sarEzvu5lC26RjyUcSCKpSDm/m0GN4nEJvc2Q==,
       }
     engines: { node: ">=22.12" }
 
-  "@fluritheme/spider@0.2.0":
+  "@fluritheme/spider@0.2.1":
     resolution:
       {
-        integrity: sha512-lSL5sr2BWDKL/0RPCbK5TsCH/W/TR5LGKiqvcAXpYmbF2JdXT+iFH0q9v2hnLDvIZIwEOWBezsQFk9HOXye/qg==,
+        integrity: sha512-sBgsgrxxbuW8JiwpzeABdEBzQR+6P7TtDsa0cVYq+HOBBmwnyKS23V8RUW0gv3PihSLDQ1dux7LtnNYgCGJOaA==,
       }
     engines: { node: ">=22.12" }
 
@@ -1528,13 +1528,13 @@ snapshots:
   "@esbuild/win32-x64@0.28.2":
     optional: true
 
-  "@fluritheme/fluri@0.2.0":
+  "@fluritheme/fluri@0.2.1":
     dependencies:
       zod: 4.6.7
 
-  "@fluritheme/grinch@0.1.0": {}
+  "@fluritheme/grinch@0.1.1": {}
 
-  "@fluritheme/spider@0.2.0": {}
+  "@fluritheme/spider@0.2.1": {}
 
   "@img/colour@1.1.0": {}
 

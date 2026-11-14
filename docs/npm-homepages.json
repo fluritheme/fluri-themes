@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-14T10:38:04.884Z",
+  "packages": [
+    {
+      "package": "@fluritheme/fluri",
+      "version": "0.2.1",
+      "homepage": "https://fluri.xyz/",
+      "tarball": "https://registry.npmjs.org/@fluritheme/fluri/-/fluri-0.2.1.tgz"
+    },
+    {
+      "package": "@fluritheme/fluri-react",
+      "version": "0.2.1",
+      "homepage": "https://fluri.xyz/",
+      "tarball": "https://registry.npmjs.org/@fluritheme/fluri-react/-/fluri-react-0.2.1.tgz"
+    },
+    {
+      "package": "@fluritheme/spider",
+      "version": "0.2.1",
+      "homepage": "https://fluri.xyz/",
+      "tarball": "https://registry.npmjs.org/@fluritheme/spider/-/spider-0.2.1.tgz"
+    },
+    {
+      "package": "@fluritheme/grinch",
+      "version": "0.1.1",
+      "homepage": "https://fluri.xyz/",
+      "tarball": "https://registry.npmjs.org/@fluritheme/grinch/-/grinch-0.1.1.tgz"
+    }
+  ]
+}

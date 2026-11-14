@@ -24,8 +24,8 @@
     "wrangler": "4.158.0"
   },
   "dependencies": {
-    "@fluritheme/fluri": "0.2.0",
-    "@fluritheme/grinch": "0.1.0",
-    "@fluritheme/spider": "0.2.0"
+    "@fluritheme/fluri": "0.2.1",
+    "@fluritheme/grinch": "0.1.1",
+    "@fluritheme/spider": "0.2.1"
   }
 }
