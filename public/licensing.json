@@ -37,6 +37,9 @@
     },
     "@fluritheme/rainy-window": {
       "firstCommercial": "0.1.0"
+    },
+    "@fluritheme/tiny-builders": {
+      "firstCommercial": "0.1.0"
     }
   }
 }

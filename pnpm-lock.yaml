@@ -25,6 +25,9 @@ importers:
       "@fluritheme/spider":
         specifier: 0.3.0
         version: 0.3.0
+      "@fluritheme/tiny-builders":
+        specifier: file:vendor/fluritheme-tiny-builders-0.1.0.tgz
+        version: file:vendor/fluritheme-tiny-builders-0.1.0.tgz
     devDependencies:
       "@playwright/test":
         specifier: 1.64.1
@@ -399,6 +402,15 @@ packages:
       {
         integrity: sha512-05XnLiYumIkDD0Bvhk897R7im7EL4rZwiyZ88w1B57EfaKasM0u8pUjxgFUyPSoFLwjhXMBOYJfoIs78QhmHSA==,
       }
+    engines: { node: ">=22.12" }
+
+  "@fluritheme/tiny-builders@file:vendor/fluritheme-tiny-builders-0.1.0.tgz":
+    resolution:
+      {
+        integrity: sha512-/a+NZIwzWPm1XVgXHGEpYZKN7vwAjx8GVUbZ8F08JtDVixMuFsfj6zB8kcK8uDRVNm+LnmH/aAvqWylbtQ9uKA==,
+        tarball: file:vendor/fluritheme-tiny-builders-0.1.0.tgz,
+      }
+    version: 0.1.0
     engines: { node: ">=22.12" }
 
   "@img/colour@1.1.0":
@@ -1571,6 +1583,8 @@ snapshots:
   "@fluritheme/rainy-window@0.1.0": {}
 
   "@fluritheme/spider@0.3.0": {}
+
+  "@fluritheme/tiny-builders@file:vendor/fluritheme-tiny-builders-0.1.0.tgz": {}
 
   "@img/colour@1.1.0": {}
 

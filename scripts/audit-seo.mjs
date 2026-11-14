@@ -7,6 +7,7 @@ const hosts = [
     "cat.fluri.xyz",
     "ghost.fluri.xyz",
     "rain.fluri.xyz",
+    "builders.fluri.xyz",
   ],
   reports = [];
 for (const host of hosts) {

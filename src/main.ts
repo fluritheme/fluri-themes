@@ -1,20 +1,22 @@
 import "./style.css";
 import type { WeatherController } from "@fluritheme/fluri";
 import type { GrinchController } from "@fluritheme/grinch";
+import type { TinyBuildersController } from "@fluritheme/tiny-builders";
 import type { RainyWindowController } from "@fluritheme/rainy-window";
 import type { GhostController } from "@fluritheme/ghost";
 import type { CatController } from "@fluritheme/black-cat";
 import type { SpiderController } from "@fluritheme/spider";
 type Theme = {
   element: HTMLElement;
-  type: "winter" | "spider" | "grinch" | "cat" | "ghost" | "rain";
+  type: "winter" | "spider" | "grinch" | "cat" | "ghost" | "rain" | "builders";
   controller?:
     | WeatherController
     | SpiderController
     | GrinchController
     | CatController
     | GhostController
-    | RainyWindowController;
+    | RainyWindowController
+    | TinyBuildersController;
   visible: boolean;
   loading: boolean;
 };
@@ -30,6 +32,7 @@ for (const [id, type] of [
   ["cat-scene", "cat"],
   ["ghost-scene", "ghost"],
   ["rain-scene", "rain"],
+  ["builders-scene", "builders"],
 ] as const) {
   const element = document.getElementById(id);
   if (element) themes.push({ element, type, visible: false, loading: false });
@@ -106,6 +109,19 @@ async function mount(theme: Theme): Promise<void> {
         webOpacity: 0.8,
         fearRadius: 100,
         speed: 1.3,
+        zIndex: 4,
+      });
+    } else if (theme.type === "builders") {
+      const { createTinyBuilders } = await import("@fluritheme/tiny-builders");
+      if (destroyed) return;
+      theme.controller = createTinyBuilders({
+        root: theme.element,
+        surfaces: "[data-build-surface]",
+        crew: 5,
+        maxSites: 1,
+        size: 1.4,
+        pace: 1.5,
+        seed: 19,
         zIndex: 4,
       });
     } else if (theme.type === "rain") {

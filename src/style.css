@@ -549,6 +549,7 @@ h1 > span {
 }
 .site-footer > div {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   font: 10px monospace;
 }
@@ -1324,4 +1325,27 @@ img {
 .rain-world .world-enter:hover {
   background: #d8f7a8;
   color: #173b30;
+}
+
+.builders-world {
+  background: #f3c745;
+  color: #263c32;
+}
+.builders-world .world-stage h2 {
+  font-size: clamp(64px, 14vw, 220px);
+}
+.builders-world .world-story {
+  margin-bottom: 200px;
+}
+.builders-world .world-enter {
+  background: #f3c745;
+  border-color: #263c3280;
+}
+.builders-world .world-enter:hover {
+  background: #263c32;
+  color: #f3c745;
+}
+.builders-world .world-meta,
+.builders-world .world-bottom {
+  border-color: #263c3250;
 }

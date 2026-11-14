@@ -29,6 +29,7 @@
     "@fluritheme/ghost": "0.1.0",
     "@fluritheme/grinch": "0.2.0",
     "@fluritheme/rainy-window": "0.1.0",
-    "@fluritheme/spider": "0.3.0"
+    "@fluritheme/spider": "0.3.0",
+    "@fluritheme/tiny-builders": "file:vendor/fluritheme-tiny-builders-0.1.0.tgz"
   }
 }

@@ -28,3 +28,7 @@ https://ghost.fluri.xyz/ — A shy website ghost with fluid floating, real hidin
 ## Rainy Window
 
 https://rain.fluri.xyz/ — Transparent glass droplets, coalescence, runoff trails and pointer wiping. Created by František Gejdoš, founder of Fluri Themes. Commercial from 0.1.0; included in the EUR 19 lifetime licence. npm: @fluritheme/rainy-window.
+
+## Tiny Builders
+
+https://builders.fluri.xyz/ — A coordinated crew that builds four different project types on real page surfaces. Work orders, supplies, trucks, scaffolds, cranes, coffee, repairs and demolition. Created by František Gejdoš. Commercial from 0.1.0; included in the EUR 19 lifetime licence. npm: @fluritheme/tiny-builders.

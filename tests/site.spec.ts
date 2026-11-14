@@ -255,3 +255,35 @@ test("Rainy Window immediately mounts its scoped glass and links the playground"
   ).toBe(true);
   expect(errors).toEqual([]);
 });
+
+test("Tiny Builders mounts a live crew on the page edge and links its worksite", async ({
+  page,
+}) => {
+  const errors: string[] = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  await page.goto("/#tiny-builders");
+  await expect(
+    page.getByRole("heading", { name: "tiny builders.", exact: true }),
+  ).toBeVisible();
+  const canvas = page.locator("canvas[data-fluri-builders]");
+  await expect(canvas).toHaveCount(1);
+  await expect
+    .poll(() =>
+      canvas.evaluate((c: HTMLCanvasElement) =>
+        c
+          .getContext("2d")!
+          .getImageData(0, 0, c.width, c.height)
+          .data.some((v, i) => i % 4 === 3 && v > 0),
+      ),
+    )
+    .toBe(true);
+  await expect(
+    page.getByRole("link", { name: "PUT THE CREW TO WORK" }),
+  ).toHaveAttribute("href", "https://builders.fluri.xyz/");
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  expect(errors).toEqual([]);
+});

@@ -11,6 +11,7 @@ test("private dashboard signs in, filters site traffic, and signs out", async ({
     "cat.fluri.xyz",
     "ghost.fluri.xyz",
     "rain.fluri.xyz",
+    "builders.fluri.xyz",
   ];
   await page.route("**/api/dashboard/**", async (route) => {
     const request = route.request(),
@@ -39,7 +40,7 @@ test("private dashboard signs in, filters site traffic, and signs out", async ({
         days,
         start,
         end: today,
-        totals: { views: 28, viewsToday: 28, views7d: 28, views30d: 28 },
+        totals: { views: 36, viewsToday: 36, views7d: 36, views30d: 36 },
         sites: hosts.map((host, i) => ({
           host,
           startedAt: null,
@@ -62,8 +63,8 @@ test("private dashboard signs in, filters site traffic, and signs out", async ({
     .fill("fixture-access-key");
   await page.getByRole("button", { name: "Open dashboard" }).click();
   await expect(page.locator("#report")).toBeVisible();
-  await expect(page.locator("#sites article")).toHaveCount(7);
-  await expect(page.locator("#metrics strong").first()).toHaveText("28");
+  await expect(page.locator("#sites article")).toHaveCount(8);
+  await expect(page.locator("#metrics strong").first()).toHaveText("36");
   await page.getByRole("button", { name: "Grinch", exact: true }).click();
   await expect(page.locator("#metrics strong").first()).toHaveText("4");
   await page.getByRole("button", { name: "Black Cat", exact: true }).click();
@@ -72,6 +73,10 @@ test("private dashboard signs in, filters site traffic, and signs out", async ({
   await expect(page.locator("#metrics strong").first()).toHaveText("6");
   await page.getByRole("button", { name: "Rainy Window", exact: true }).click();
   await expect(page.locator("#metrics strong").first()).toHaveText("7");
+  await page
+    .getByRole("button", { name: "Tiny Builders", exact: true })
+    .click();
+  await expect(page.locator("#metrics strong").first()).toHaveText("8");
   await page.getByLabel("Period", { exact: true }).selectOption("7");
   await expect(page.locator("#metrics")).toContainText("SELECTED 7 DAYS");
   await expect(page.locator("#export")).toHaveAttribute(
