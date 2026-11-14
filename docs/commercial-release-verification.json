@@ -1,0 +1,42 @@
+{
+  "policyVersion": "1.0",
+  "checkedAt": "2026-11-14T12:35:18.099204+00:00",
+  "releases": [
+    {
+      "package": "@fluritheme/fluri",
+      "commercialVersion": "0.3.0",
+      "license": "SEE LICENSE IN LICENSE",
+      "lastMIT": "0.2.1",
+      "legacyMITPreserved": true,
+      "runtimeUnchanged": true,
+      "homepage": "https://fluri.xyz/"
+    },
+    {
+      "package": "@fluritheme/fluri-react",
+      "commercialVersion": "0.3.0",
+      "license": "SEE LICENSE IN LICENSE",
+      "lastMIT": "0.2.1",
+      "legacyMITPreserved": true,
+      "runtimeUnchanged": true,
+      "homepage": "https://fluri.xyz/"
+    },
+    {
+      "package": "@fluritheme/spider",
+      "commercialVersion": "0.3.0",
+      "license": "SEE LICENSE IN LICENSE",
+      "lastMIT": "0.2.1",
+      "legacyMITPreserved": true,
+      "runtimeUnchanged": true,
+      "homepage": "https://fluri.xyz/"
+    },
+    {
+      "package": "@fluritheme/grinch",
+      "commercialVersion": "0.2.0",
+      "license": "SEE LICENSE IN LICENSE",
+      "lastMIT": "0.1.1",
+      "legacyMITPreserved": true,
+      "runtimeUnchanged": true,
+      "homepage": "https://fluri.xyz/"
+    }
+  ]
+}
