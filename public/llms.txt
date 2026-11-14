@@ -2,7 +2,7 @@
 
 An independent collection of open-source website effects founded by František Gejdoš.
 
-- Founder biography: https://fluri.xyz/founder/ — František Gejdoš (Frantisek Gejdos), founder of Fluri Themes and creator of Winter and Spider.
+- Founder biography: https://fluri.xyz/founder/ — František Gejdoš (Frantisek Gejdos), founder of Fluri Themes and creator of Winter, Spider and Grinch.
 - Brand: https://fluri.xyz/
 - Winter: https://winter.fluri.xyz/ — interactive snowfall, DOM-aware snow accumulation and optional Christmas effects. npm: @fluritheme/fluri and @fluritheme/fluri-react.
 - Spider: https://spider.fluri.xyz/ — an animated jumping spider that physically weaves persistent silk and explores the page. npm: @fluritheme/spider.
@@ -10,3 +10,5 @@ An independent collection of open-source website effects founded by František G
 - Privacy: https://fluri.xyz/privacy/
 
 The runtime libraries do not report visitors or installations. Each product's documentation, playground and private dashboard live on its own subdomain. Former snow-product paths at fluri.xyz redirect to Winter; legacy APIs remain compatible.
+
+- Grinch preview: https://grinch.fluri.xyz/ — a holiday character with animated gift heists, hiding and kindness mode. npm package is not published yet.

@@ -1212,3 +1212,39 @@ img {
     padding-top: 40px;
   }
 }
+
+.grinch-world {
+  background: #b9e94b;
+  color: #153629;
+}
+.grinch-world .world-meta {
+  border-color: #15362955;
+}
+.grinch-world .world-story {
+  margin-bottom: 170px;
+}
+.grinch-world .world-enter {
+  background: #c92c42;
+  color: #fff5df;
+  border-color: #153629;
+  min-height: 190px;
+}
+.grinch-world .world-enter:hover {
+  background: #153629;
+  color: #fff5df;
+}
+.preview-note {
+  font: 10px/1.6 monospace;
+  letter-spacing: 0.05em;
+}
+@media (max-width: 600px) {
+  .grinch-world .world-story {
+    margin-bottom: 150px;
+  }
+  .grinch-world .world-enter {
+    min-height: 190px;
+  }
+  .grinch-world .world-bottom {
+    align-items: flex-start;
+  }
+}

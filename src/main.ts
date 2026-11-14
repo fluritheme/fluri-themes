@@ -1,10 +1,11 @@
 import "./style.css";
 import type { WeatherController } from "@fluritheme/fluri";
+import type { GrinchController } from "../vendor/grinch/index.js";
 import type { SpiderController } from "@fluritheme/spider";
 type Theme = {
   element: HTMLElement;
-  type: "winter" | "spider";
-  controller?: WeatherController | SpiderController;
+  type: "winter" | "spider" | "grinch";
+  controller?: WeatherController | SpiderController | GrinchController;
   visible: boolean;
   loading: boolean;
 };
@@ -16,11 +17,13 @@ const themes: Theme[] = [];
 for (const [id, type] of [
   ["winter-scene", "winter"],
   ["spider-scene", "spider"],
+  ["grinch-scene", "grinch"],
 ] as const) {
   const element = document.getElementById(id);
   if (element) themes.push({ element, type, visible: false, loading: false });
 }
 function reconcile(): void {
+  if (destroyed) return;
   const paused = stopped || media.matches || document.hidden;
   for (const theme of themes) {
     if (paused || !theme.visible) theme.controller?.pause();
@@ -75,7 +78,7 @@ async function mount(theme: Theme): Promise<void> {
       weather.start();
       weather.addSnow(2);
       theme.controller = weather;
-    } else {
+    } else if (theme.type === "spider") {
       const { createSpider } = await import("@fluritheme/spider");
       if (destroyed) return;
       theme.controller = createSpider({
@@ -91,6 +94,19 @@ async function mount(theme: Theme): Promise<void> {
         webOpacity: 0.8,
         fearRadius: 100,
         speed: 1.3,
+        zIndex: 4,
+      });
+    } else {
+      const { createGrinch } = await import("../vendor/grinch/index.js");
+      if (destroyed) return;
+      theme.controller = createGrinch({
+        root: theme.element,
+        territory: "root",
+        targets: "[data-grinch-gift]",
+        objects: "[data-grinch-object]",
+        size: 1.15,
+        fearRadius: 80,
+        cooldown: 10,
         zIndex: 4,
       });
     }

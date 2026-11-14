@@ -138,3 +138,17 @@ test("founder biography is crawlable and links the real projects and identity", 
     ),
   ).toBe(true);
 });
+
+test("Grinch preview links to its playground without an unavailable install", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const section = page.locator(".grinch-world");
+  await section.scrollIntoViewIfNeeded();
+  await expect(
+    section.getByRole("link", { name: "LET THE MISCHIEF IN" }),
+  ).toHaveAttribute("href", "https://grinch.fluri.xyz/");
+  await expect(section).toContainText("PACKAGE COMING SOON");
+  await expect(section.locator("[data-copy]")).toHaveCount(0);
+  await expect(page.locator("[data-fluri-grinch]")).toHaveCount(1);
+});

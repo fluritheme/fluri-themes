@@ -35,3 +35,5 @@ Founder portrait and brand mark were supplied by the founder. Original full-reso
 ## Distribution and discoverability
 
 All three packages are published on npm and JSR. See [verified registry, CDN and directory links](docs/distribution.md), including search submissions and their limits. The public [founder biography](https://fluri.xyz/founder/) connects the projects to František Gejdoš.
+
+Grinch is available as an interactive preview at https://grinch.fluri.xyz/. Its runtime is included locally in `vendor/grinch` for the collection preview; the npm package remains unpublished. The source package lives separately at `/Users/gejdos/Desktop/grinch`.
