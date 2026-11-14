@@ -8,11 +8,14 @@ importers:
   .:
     dependencies:
       "@fluritheme/black-cat":
-        specifier: file:vendor/fluritheme-black-cat-0.1.0.tgz
-        version: file:vendor/fluritheme-black-cat-0.1.0.tgz
+        specifier: 0.1.0
+        version: 0.1.0
       "@fluritheme/fluri":
         specifier: 0.3.0
         version: 0.3.0
+      "@fluritheme/ghost":
+        specifier: 0.1.0
+        version: 0.1.0
       "@fluritheme/grinch":
         specifier: 0.2.0
         version: 0.2.0
@@ -354,13 +357,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@fluritheme/black-cat@file:vendor/fluritheme-black-cat-0.1.0.tgz":
+  "@fluritheme/black-cat@0.1.0":
     resolution:
       {
-        integrity: sha512-0onRGLrLqmA1u4rXPHwDNpvPk8MZHKFfmwjjRkaqFeqK15TK7Z6NsMJgcGCTmoKLBSNfVot2eu9Ck8Mzezdzdw==,
-        tarball: file:vendor/fluritheme-black-cat-0.1.0.tgz,
+        integrity: sha512-00U3/gH/U4s9/Xel2CBaUtaT5aBz+W/0SNm7d7BzuKvaiYNIkKJFm4Nto+UAANllY+c7WGsWVGWJlUyo6wlzVg==,
       }
-    version: 0.1.0
     engines: { node: ">=22.12" }
 
   "@fluritheme/fluri@0.3.0":
@@ -368,6 +369,13 @@ packages:
       {
         integrity: sha512-KJwk+evqB1wYGiCe3Miwxpy7bUyacK5jmiJb3EPFGi7d47W14b2mtbPWiKsz6pMxptIV/pZnXMZ7hGf33cIzmg==,
       }
+
+  "@fluritheme/ghost@0.1.0":
+    resolution:
+      {
+        integrity: sha512-sk/0nWIRx1mFwLYiGGzW9sCEAqTWb/xXWLXCVPTUcfbrMdF3gysbckEkRO4epAB5zBExUWZTJLm4OVaHVH+kPQ==,
+      }
+    engines: { node: ">=22.12" }
 
   "@fluritheme/grinch@0.2.0":
     resolution:
@@ -1540,11 +1548,13 @@ snapshots:
   "@esbuild/win32-x64@0.28.2":
     optional: true
 
-  "@fluritheme/black-cat@file:vendor/fluritheme-black-cat-0.1.0.tgz": {}
+  "@fluritheme/black-cat@0.1.0": {}
 
   "@fluritheme/fluri@0.3.0":
     dependencies:
       zod: 4.6.7
+
+  "@fluritheme/ghost@0.1.0": {}
 
   "@fluritheme/grinch@0.2.0": {}
 

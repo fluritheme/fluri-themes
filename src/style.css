@@ -1290,3 +1290,22 @@ img {
 .cat-world .world-bottom {
   border-color: #191a2045;
 }
+
+.ghost-world {
+  background: #c9b3ed;
+  color: #272137;
+}
+.ghost-world .world-meta,
+.ghost-world .world-enter {
+  border-color: #27213755;
+}
+.ghost-world .world-enter {
+  background: #c9b3ed;
+}
+.ghost-world .world-enter:hover {
+  background: #272137;
+  color: #d8f3b3;
+}
+.ghost-world .world-bottom {
+  border-color: #27213745;
+}

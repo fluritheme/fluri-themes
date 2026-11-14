@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-14T15:52:42.428324+00:00",
+  "releases": [
+    {
+      "package": "@fluritheme/black-cat",
+      "version": "0.1.0",
+      "normalNpmInstall": true,
+      "ssrImport": true,
+      "commercialLicenceVerified": true,
+      "homepage": "https://fluri.xyz/"
+    },
+    {
+      "package": "@fluritheme/ghost",
+      "version": "0.1.0",
+      "normalNpmInstall": true,
+      "ssrImport": true,
+      "commercialLicenceVerified": true,
+      "homepage": "https://fluri.xyz/"
+    }
+  ]
+}

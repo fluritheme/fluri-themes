@@ -1,11 +1,12 @@
 # Fluri Themes
 
-The collection and founder website at [fluri.xyz](https://fluri.xyz/), built with Vite, TypeScript and Cloudflare Workers. Features original supplied brand artwork, František Gejdoš’s founder portrait and social links, and live previews of the actual Winter, Spider, Grinch and Black Cat packages.
+The collection and founder website at [fluri.xyz](https://fluri.xyz/), built with Vite, TypeScript and Cloudflare Workers. Features original supplied brand artwork, František Gejdoš’s founder portrait and social links, and live previews of the actual Winter, Spider, Grinch, Black Cat and Ghost packages.
 
 - [Winter](https://winter.fluri.xyz/) · [source](https://github.com/fluritheme/fluri)
 - [Spider](https://spider.fluri.xyz/) · [source](https://github.com/fluritheme/spider)
 - [Grinch](https://grinch.fluri.xyz/) · [source](https://github.com/fluritheme/grinch)
-- [Black Cat](https://cat.fluri.xyz/) · private source, commercial from 0.1.0
+- [Black Cat](https://cat.fluri.xyz/) · [npm](https://www.npmjs.com/package/@fluritheme/black-cat)
+- [Ghost](https://ghost.fluri.xyz/) · [npm](https://www.npmjs.com/package/@fluritheme/ghost)
 - [Founder](https://fluri.xyz/founder/)
 
 ## Development
@@ -26,7 +27,7 @@ Install browser engines with `pnpm exec playwright install --with-deps chromium 
 
 The `WINTER` service binding preserves old `/api/*` calls with their original URL, Origin, body and cookies. The existing Winter service performs authentication and origin validation. Never rewrite an untrusted Origin header or use a cross-domain redirect for a POST API request.
 
-Old product GET/HEAD routes redirect to the same path on Winter with query parameters preserved. Old hashed asset requests fall back to the Winter service when absent from this site. `/dashboard/` is the shared private traffic dashboard. It combines main, Grinch and Black Cat traffic from `CENTRAL_DB` with existing Winter and Spider daily totals through read-only queries. Former subdomain dashboard pages redirect here, and their public dashboard APIs return 410. The existing Winter service validates the root host-only session cookie; the access key stays the same. Historical traffic is retained. The apex sitemap and metadata describe the collection; Winter publishes its own product sitemap and canonicals.
+Old product GET/HEAD routes redirect to the same path on Winter with query parameters preserved. Old hashed asset requests fall back to the Winter service when absent from this site. `/dashboard/` is the shared private traffic dashboard. It combines main, Grinch, Black Cat and Ghost traffic from `CENTRAL_DB` with existing Winter and Spider daily totals through read-only queries. Former subdomain dashboard pages redirect here, and their public dashboard APIs return 410. The existing Winter service validates the root host-only session cookie; the access key stays the same. Historical traffic is retained. The apex sitemap and metadata describe the collection; Winter publishes its own product sitemap and canonicals.
 
 During cutover, first deploy Winter with both hostnames temporarily attached, then deploy this Worker to move the apex directly. Final Winter configuration must list only `winter.fluri.xyz`, so future Winter deployments cannot take the apex back. Keep the existing Worker available for the service binding and preserve API compatibility.
 
@@ -54,4 +55,4 @@ Apply `migrations/0001_central_traffic.sql` to `CENTRAL_DB` before first deploym
 
 Future/current commercial editions use [Fluri Themes Commercial License 1.0](https://fluri.xyz/license/). Read [LICENSING.md](LICENSING.md) and licensing.json for the legacy MIT version boundaries. New packages must follow AGENTS.md and include the shared licence files. The collection previews the published commercial editions: Winter 0.3.0, Spider 0.3.0 and Grinch 0.2.0. Published archives and legacy MIT boundaries are verified in docs/commercial-release-verification.json; run `python3 scripts/verify-commercial-releases.py` to repeat that registry check. The public license page provides an inbound licence-request link; automated checkout and customer access are separate work.
 
-Black Cat is previewed from the versioned evaluation archive in `vendor/`, pending an npm listing. Its package is commercial from 0.1.0; the live demo is https://cat.fluri.xyz/.
+Black Cat is installed from npm as `@fluritheme/black-cat@0.1.0`. It is commercial from its first release. Ghost is installed from npm as `@fluritheme/ghost@0.1.0`, with its own live playground at https://ghost.fluri.xyz/. Both new packages were verified through a clean npm installation and SSR imports.

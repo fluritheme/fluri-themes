@@ -1,13 +1,18 @@
 import "./style.css";
 import type { WeatherController } from "@fluritheme/fluri";
 import type { GrinchController } from "@fluritheme/grinch";
+import type { GhostController } from "@fluritheme/ghost";
 import type { CatController } from "@fluritheme/black-cat";
 import type { SpiderController } from "@fluritheme/spider";
 type Theme = {
   element: HTMLElement;
-  type: "winter" | "spider" | "grinch" | "cat";
+  type: "winter" | "spider" | "grinch" | "cat" | "ghost";
   controller?:
-    WeatherController | SpiderController | GrinchController | CatController;
+    | WeatherController
+    | SpiderController
+    | GrinchController
+    | CatController
+    | GhostController;
   visible: boolean;
   loading: boolean;
 };
@@ -21,6 +26,7 @@ for (const [id, type] of [
   ["spider-scene", "spider"],
   ["grinch-scene", "grinch"],
   ["cat-scene", "cat"],
+  ["ghost-scene", "ghost"],
 ] as const) {
   const element = document.getElementById(id);
   if (element) themes.push({ element, type, visible: false, loading: false });
@@ -97,6 +103,17 @@ async function mount(theme: Theme): Promise<void> {
         webOpacity: 0.8,
         fearRadius: 100,
         speed: 1.3,
+        zIndex: 4,
+      });
+    } else if (theme.type === "ghost") {
+      const { createGhost } = await import("@fluritheme/ghost");
+      if (destroyed) return;
+      theme.controller = createGhost({
+        root: theme.element,
+        objects: "[data-ghost-object]",
+        size: innerWidth < 600 ? 110 : 140,
+        shyness: 0.6,
+        seed: 17,
         zIndex: 4,
       });
     } else if (theme.type === "cat") {

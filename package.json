@@ -24,8 +24,9 @@
     "wrangler": "4.158.0"
   },
   "dependencies": {
-    "@fluritheme/black-cat": "file:vendor/fluritheme-black-cat-0.1.0.tgz",
+    "@fluritheme/black-cat": "0.1.0",
     "@fluritheme/fluri": "0.3.0",
+    "@fluritheme/ghost": "0.1.0",
     "@fluritheme/grinch": "0.2.0",
     "@fluritheme/spider": "0.3.0"
   }

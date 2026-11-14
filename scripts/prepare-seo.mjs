@@ -233,7 +233,7 @@ for (const file of settings.files) {
 await mkdir(settings.public, { recursive: true });
 await writeFile(
   path.join(settings.public, "robots.txt"),
-  `User-agent: *\nAllow: /\nDisallow: /dashboard\nDisallow: /api/\nDisallow: /internal/\nSitemap: ${settings.origin}/sitemap.xml\n`,
+  `User-agent: *\nAllow: /\nDisallow: /dashboard\nDisallow: /api/\nDisallow: /internal/\nSitemap: ${settings.origin}/${mode === "hub" ? "sitemap-index.xml" : "sitemap.xml"}\n`,
 );
 await writeFile(
   path.join(settings.public, "sitemap.xml"),
@@ -263,7 +263,7 @@ await writeFile(
 if (mode === "hub")
   await writeFile(
     path.join(settings.public, "sitemap-index.xml"),
-    `<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${["fluri.xyz", "winter.fluri.xyz", "spider.fluri.xyz", "grinch.fluri.xyz", "cat.fluri.xyz"].map((h) => `<sitemap><loc>https://${h}/sitemap.xml</loc></sitemap>`).join("")}</sitemapindex>`,
+    `<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${["fluri.xyz", "winter.fluri.xyz", "spider.fluri.xyz", "grinch.fluri.xyz", "cat.fluri.xyz", "ghost.fluri.xyz"].map((h) => `<sitemap><loc>https://${h}/sitemap.xml</loc></sitemap>`).join("")}</sitemapindex>`,
   );
 const manifestPath = path.join(settings.public, "indexnow.json");
 await writeFile(

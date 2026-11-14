@@ -3,4 +3,4 @@ Allow: /
 Disallow: /dashboard
 Disallow: /api/
 Disallow: /internal/
-Sitemap: https://fluri.xyz/sitemap.xml
+Sitemap: https://fluri.xyz/sitemap-index.xml

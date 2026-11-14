@@ -207,3 +207,24 @@ test("Black Cat loads a scoped preview and links its real demo and licence", asy
   ).toBeVisible();
   expect(errors).toEqual([]);
 });
+
+test("Ghost loads a scoped preview and links its live playground", async ({
+  page,
+}) => {
+  const errors: string[] = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  await page.goto("/#ghost");
+  await expect(
+    page.getByRole("heading", { name: "ghost.", exact: true }),
+  ).toBeVisible();
+  await expect(page.locator("canvas[data-fluri-ghost]")).toHaveCount(1);
+  await expect(
+    page.getByRole("link", { name: "INVITE A LITTLE SPIRIT IN" }),
+  ).toHaveAttribute("href", "https://ghost.fluri.xyz/");
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  expect(errors).toEqual([]);
+});

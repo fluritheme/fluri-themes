@@ -9,6 +9,7 @@ test("private dashboard signs in, filters site traffic, and signs out", async ({
     "spider.fluri.xyz",
     "grinch.fluri.xyz",
     "cat.fluri.xyz",
+    "ghost.fluri.xyz",
   ];
   await page.route("**/api/dashboard/**", async (route) => {
     const request = route.request(),
@@ -37,7 +38,7 @@ test("private dashboard signs in, filters site traffic, and signs out", async ({
         days,
         start,
         end: today,
-        totals: { views: 15, viewsToday: 15, views7d: 15, views30d: 15 },
+        totals: { views: 21, viewsToday: 21, views7d: 21, views30d: 21 },
         sites: hosts.map((host, i) => ({
           host,
           startedAt: null,
@@ -60,12 +61,14 @@ test("private dashboard signs in, filters site traffic, and signs out", async ({
     .fill("fixture-access-key");
   await page.getByRole("button", { name: "Open dashboard" }).click();
   await expect(page.locator("#report")).toBeVisible();
-  await expect(page.locator("#sites article")).toHaveCount(5);
-  await expect(page.locator("#metrics strong").first()).toHaveText("15");
+  await expect(page.locator("#sites article")).toHaveCount(6);
+  await expect(page.locator("#metrics strong").first()).toHaveText("21");
   await page.getByRole("button", { name: "Grinch", exact: true }).click();
   await expect(page.locator("#metrics strong").first()).toHaveText("4");
   await page.getByRole("button", { name: "Black Cat", exact: true }).click();
   await expect(page.locator("#metrics strong").first()).toHaveText("5");
+  await page.getByRole("button", { name: "Ghost", exact: true }).click();
+  await expect(page.locator("#metrics strong").first()).toHaveText("6");
   await page.getByLabel("Period", { exact: true }).selectOption("7");
   await expect(page.locator("#metrics")).toContainText("SELECTED 7 DAYS");
   await expect(page.locator("#export")).toHaveAttribute(

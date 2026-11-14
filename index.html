@@ -32,7 +32,7 @@
             "alternateName": "Frantisek Gejdos",
             "url": "https://fluri.xyz/founder/",
             "image": "https://fluri.xyz/founder-1200.jpg",
-            "description": "Founder of Fluri Themes and creator of the interactive Winter, Spider, Grinch and Black Cat website effects.",
+            "description": "Founder of Fluri Themes and creator of the interactive Winter, Spider, Grinch, Black Cat and Ghost website effects.",
             "jobTitle": "Founder of Fluri Themes",
             "worksFor": { "@id": "https://fluri.xyz/#organization" },
             "sameAs": [
@@ -82,6 +82,11 @@
                   "@type": "ListItem",
                   "position": 4,
                   "item": { "@id": "https://cat.fluri.xyz/#software" }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "item": { "@id": "https://ghost.fluri.xyz/#software" }
                 }
               ]
             }
@@ -166,7 +171,28 @@
               "React website effects",
               "František Gejdoš",
               "Fluri Themes"
-            ]
+            ],
+            "downloadUrl": "https://www.npmjs.com/package/@fluritheme/black-cat"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://ghost.fluri.xyz/#software",
+            "name": "Ghost by Fluri",
+            "url": "https://ghost.fluri.xyz/",
+            "description": "A shy website ghost with fluid floating, real hiding places, peeking, disguises and gentle scares.",
+            "license": "https://fluri.xyz/license/",
+            "programmingLanguage": "TypeScript",
+            "runtimePlatform": "Web browser",
+            "author": { "@id": "https://fluri.xyz/#founder" },
+            "publisher": { "@id": "https://fluri.xyz/#organization" },
+            "keywords": [
+              "interactive website effects",
+              "JavaScript website animations",
+              "React website effects",
+              "František Gejdoš",
+              "Fluri Themes"
+            ],
+            "downloadUrl": "https://www.npmjs.com/package/@fluritheme/ghost"
           }
         ]
       }
@@ -175,7 +201,7 @@
     <link rel="canonical" href="https://fluri.xyz/" />
     <meta
       name="description"
-      content="Little details. A little delight. Explore Winter, Spider, Grinch and Black Cat: interactive website effects by František Gejdoš, founder of Fluri Themes."
+      content="Little details. A little delight. Explore Winter, Spider, Grinch, Black Cat and Ghost: interactive website effects by František Gejdoš, founder of Fluri Themes."
     />
     <meta
       name="robots"
@@ -190,7 +216,7 @@
     />
     <meta
       property="og:description"
-      content="Little details. A little delight. Explore Winter, Spider, Grinch and Black Cat: interactive website effects by František Gejdoš, founder of Fluri Themes."
+      content="Little details. A little delight. Explore Winter, Spider, Grinch, Black Cat and Ghost: interactive website effects by František Gejdoš, founder of Fluri Themes."
     />
     <meta property="og:url" content="https://fluri.xyz/" />
     <meta property="og:image" content="https://fluri.xyz/social.png" />
@@ -207,7 +233,7 @@
     />
     <meta
       name="twitter:description"
-      content="Little details. A little delight. Explore Winter, Spider, Grinch and Black Cat: interactive website effects by František Gejdoš, founder of Fluri Themes."
+      content="Little details. A little delight. Explore Winter, Spider, Grinch, Black Cat and Ghost: interactive website effects by František Gejdoš, founder of Fluri Themes."
     />
     <meta name="twitter:image" content="https://fluri.xyz/social.png" />
   </head>
@@ -224,7 +250,7 @@
         /><span>fluri<span>THEMES</span></span></a
       >
       <nav aria-label="Main navigation">
-        <a href="#themes">THE THEMES <sup>04</sup></a
+        <a href="#themes">THE THEMES <sup>05</sup></a
         ><a href="#founder">THE MAKER</a
         ><button type="button" id="motion-toggle" aria-pressed="false">
           Ⅱ PAUSE MOTION</button
@@ -267,7 +293,7 @@
         </div>
         <div class="hero-rule">
           <span>SCROLL FOR A CHANGE OF ATMOSPHERE</span
-          ><span>01—04 / THE COLLECTION ↓</span>
+          ><span>01—05 / THE COLLECTION ↓</span>
         </div>
       </section>
       <section
@@ -412,8 +438,39 @@
           ><a href="/license/">ALL THEMES / €19 ↗</a>
         </div>
       </section>
+      <section
+        class="theme-world ghost-world"
+        id="ghost"
+        aria-labelledby="ghost-title"
+      >
+        <div class="world-meta">
+          <span>05 / GHOST</span><span>A LITTLE OUT OF BODY.</span
+          ><span>LIFETIME LICENCE ↗</span>
+        </div>
+        <div class="world-stage" id="ghost-scene">
+          <h2 id="ghost-title">ghost.</h2>
+          <div class="world-story">
+            <p>YOUR WEBSITE.<br />A FRIENDLY PRESENCE.</p>
+            <p>
+              Fluid floating. A shy little peek. An extremely questionable
+              disguise. Some visitors make themselves at home.
+            </p>
+          </div>
+          <a
+            class="world-enter"
+            data-ghost-object
+            href="https://ghost.fluri.xyz/"
+            >INVITE A LITTLE SPIRIT IN <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="world-bottom">
+          <span>REAL HIDING PLACES / CURIOUS EYES / GENTLE SCARES</span
+          ><a href="https://ghost.fluri.xyz/#playground">TRY GHOST ↗</a
+          ><a href="/license/">ALL THEMES / €19 ↗</a>
+        </div>
+      </section>
       <section class="manifesto">
-        <span class="section-id">THE FLURI IDEA / 05</span>
+        <span class="section-id">THE FLURI IDEA / 06</span>
         <h2>THE WEB CAN<br />USE A LITTLE<br /><span>PERSONALITY.</span></h2>
         <div>
           <span class="asterisk" aria-hidden="true">✳</span>
@@ -429,7 +486,7 @@
       </section>
       <section class="founder-section" id="founder">
         <div class="founder-heading">
-          <span class="section-id">FOUNDER & MAKER / 06</span>
+          <span class="section-id">FOUNDER & MAKER / 07</span>
           <h2>THE HUMAN<br /><span>BEHIND IT.</span></h2>
         </div>
         <div class="founder-layout">
@@ -461,7 +518,7 @@
               makes you stop, move your cursor, and play for a moment.
             </p>
             <p>
-              Winter, Spider, Grinch and Black Cat are the start of Fluri
+              Winter, Spider, Grinch, Black Cat and Ghost are the start of Fluri
               Themes. Try every theme here, then get one lifetime licence for
               your personal and client websites. And follow along for whatever
               comes next.
@@ -513,6 +570,7 @@
         ><a href="https://grinch.fluri.xyz/">GRINCH ↗</a
         ><a href="https://spider.fluri.xyz/">SPIDER ↗</a
         ><a href="https://github.com/fluritheme">GITHUB ↗</a
+        ><a href="https://ghost.fluri.xyz/">GHOST ↗</a
         ><a href="https://cat.fluri.xyz/">BLACK CAT ↗</a
         ><a href="/license/">LICENCE</a><a href="/privacy/">PRIVACY</a>
       </div>
