@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-14T18:10:48.799Z",
+  "symptom": "Chrome showed HTTP 403 access denied for the public Ghost page.",
+  "reproduction": "Python urllib default user agent returned Cloudflare error 1010; browser user agent returned 200.",
+  "rootCause": "Cloudflare Browser Integrity Check signature filtering.",
+  "fix": {
+    "zoneRulesetId": "3f62b4696ee9426695480a77ebd95b02",
+    "ruleId": "7870d1e21af24bd7a66181b65355ddd2",
+    "ref": "ghost_public_browser_compatibility",
+    "phase": "http_config_settings",
+    "setting": {
+      "bic": false
+    },
+    "host": "ghost.fluri.xyz",
+    "methods": ["GET", "HEAD"],
+    "excludedPathPrefixes": ["/api/", "/dashboard", "/internal/"]
+  },
+  "verified": {
+    "previouslyBlockedClientStatus": 200,
+    "chromeNormalUrlLoads": true,
+    "renderedGhostCanvases": 2
+  },
+  "reference": "https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/"
+}

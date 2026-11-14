@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-11-14T18:10:48.796Z",
+  "package": "@fluritheme/rainy-window",
+  "version": "0.1.0",
+  "homepage": "https://fluri.xyz/",
+  "license": "SEE LICENSE IN LICENSE",
+  "integrity": "sha512-FpyVwWXL6UhonVoVmPAnbVJlBfpT0Ez8BWWf9dgWCO0UpxZvXTpGQDOSjhE5U6FnDJ7Qq6NiyP3f+vtKef7Etg==",
+  "registry": "https://registry.npmjs.org/@fluritheme%2frainy-window/0.1.0",
+  "demo": "https://rain.fluri.xyz/",
+  "npmCleanInstall": true,
+  "ssrImportVerified": true,
+  "licenseMatchesCanonical": true,
+  "unitTests": 11,
+  "browserTests": 24,
+  "browsers": ["Chromium", "Firefox", "WebKit", "iPhone 13"],
+  "packageCI": {
+    "run": 43624053632,
+    "conclusion": "success"
+  },
+  "google": {
+    "sitemapSubmissionAccepted": true,
+    "homepageIndexingRequested": true,
+    "indexed": false
+  },
+  "bing": {
+    "verified": true,
+    "sitemapSubmissionAccepted": true,
+    "status": "Processing"
+  },
+  "indexNow": {
+    "rain": 202,
+    "hub": 200
+  },
+  "workerVersion": "0d65d9c3-9b93-49ad-acc7-c1549ac24956"
+}
