@@ -369,7 +369,7 @@
         "canonical": "https://grinch.fluri.xyz/",
         "selfCanonical": true,
         "title": "Grinch by Fluri — A little holiday mischief for your website",
-        "description": "A mischievous green holiday visitor for your website. Watch him sneak, climb, steal illustrated presents, hide behind cards, and find a little kindness. Try the interactive preview from Fluri Themes.",
+        "description": "A mischievous green holiday visitor for your website. Watch him sneak, climb, steal illustrated presents, hide behind cards, and find a little kindness. A zero-dependency TypeScript package from Fluri Themes.",
         "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
         "schemaCount": 1,
         "validSchema": true,
