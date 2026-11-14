@@ -2,7 +2,7 @@
 
 An independent collection of interactive website effects founded by František Gejdoš.
 
-- Founder biography: https://fluri.xyz/founder/ — František Gejdoš (Frantisek Gejdos), founder of Fluri Themes and creator of Winter, Spider and Grinch.
+- Founder biography: https://fluri.xyz/founder/ — František Gejdoš (Frantisek Gejdos), founder of Fluri Themes and creator of Winter, Spider, Grinch and Black Cat.
 - Brand: https://fluri.xyz/
 - Winter: https://winter.fluri.xyz/ — interactive snowfall, DOM-aware snow accumulation and optional Christmas effects. npm: @fluritheme/fluri and @fluritheme/fluri-react.
 - Spider: https://spider.fluri.xyz/ — an animated jumping spider that physically weaves persistent silk and explores the page. npm: @fluritheme/spider.
@@ -16,3 +16,7 @@ The runtime libraries do not report visitors or installations. Each product's do
 ## Licensing
 
 Current commercial releases require a EUR 19 one-time Lifetime License for production use, including unlimited personal and client websites and all current and future themes. Private non-production evaluation and public official demos are available before purchase. No runtime activation or telemetry. Canonical terms: https://fluri.xyz/license/. Winter and Spider releases through 0.2.1, and Grinch through 0.1.1, remain MIT. Licensing does not retroactively change those releases.
+
+## Black Cat
+
+https://cat.fluri.xyz/ — A DOM-aware black cat that walks on page elements, stalks the pointer, plays with yarn, hides and sleeps. Commercial from 0.1.0; included in the Fluri lifetime licence. Not listed on npm yet.

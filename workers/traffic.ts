@@ -13,6 +13,7 @@ export const hosts = [
   "winter.fluri.xyz",
   "spider.fluri.xyz",
   "grinch.fluri.xyz",
+  "cat.fluri.xyz",
 ] as const;
 export type Host = (typeof hosts)[number];
 const groups: [string, string[]][] = [

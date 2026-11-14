@@ -1,11 +1,13 @@
 import "./style.css";
 import type { WeatherController } from "@fluritheme/fluri";
 import type { GrinchController } from "@fluritheme/grinch";
+import type { CatController } from "@fluritheme/black-cat";
 import type { SpiderController } from "@fluritheme/spider";
 type Theme = {
   element: HTMLElement;
-  type: "winter" | "spider" | "grinch";
-  controller?: WeatherController | SpiderController | GrinchController;
+  type: "winter" | "spider" | "grinch" | "cat";
+  controller?:
+    WeatherController | SpiderController | GrinchController | CatController;
   visible: boolean;
   loading: boolean;
 };
@@ -18,6 +20,7 @@ for (const [id, type] of [
   ["winter-scene", "winter"],
   ["spider-scene", "spider"],
   ["grinch-scene", "grinch"],
+  ["cat-scene", "cat"],
 ] as const) {
   const element = document.getElementById(id);
   if (element) themes.push({ element, type, visible: false, loading: false });
@@ -94,6 +97,17 @@ async function mount(theme: Theme): Promise<void> {
         webOpacity: 0.8,
         fearRadius: 100,
         speed: 1.3,
+        zIndex: 4,
+      });
+    } else if (theme.type === "cat") {
+      const { createCat } = await import("@fluritheme/black-cat");
+      if (destroyed) return;
+      theme.controller = createCat({
+        root: theme.element,
+        surfaces: "[data-cat-surface]",
+        hidingSpots: "[data-cat-hide]",
+        size: innerWidth < 600 ? 105 : 140,
+        seed: 19,
         zIndex: 4,
       });
     } else {

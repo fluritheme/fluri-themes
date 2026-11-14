@@ -6,6 +6,7 @@ const labels: Record<string, string> = {
   "winter.fluri.xyz": "Winter",
   "spider.fluri.xyz": "Spider",
   "grinch.fluri.xyz": "Grinch",
+  "cat.fluri.xyz": "Black Cat",
 };
 let data: Traffic | undefined,
   selected = "all",
@@ -160,7 +161,7 @@ function valid(value: unknown): value is Traffic {
     typeof v.end === "string" &&
     /^\d{4}-\d{2}-\d{2}$/.test(v.end) &&
     Array.isArray(v.sites) &&
-    v.sites.length === 4 &&
+    v.sites.length === Object.keys(labels).length &&
     v.sites.every(
       (s: SiteTraffic) =>
         s &&

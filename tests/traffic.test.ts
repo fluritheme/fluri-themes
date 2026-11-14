@@ -21,6 +21,13 @@ function database(legacy = false): Database {
           "utf8",
         ),
   );
+  if (!legacy)
+    sql.exec(
+      readFileSync(
+        new URL("../migrations/0002_theme_subdomains.sql", import.meta.url),
+        "utf8",
+      ),
+    );
   function statement(
     query: string,
     values: (string | number | null)[] = [],
@@ -87,7 +94,7 @@ it("counts public HTML without recording identity, queries or opt-outs", async (
     observe(browser(), new Response("missing", { status: 404 })),
   ).toBeNull();
 });
-it("combines all four sites and preserves historical legacy counts without package calls", async () => {
+it("combines all five sites and preserves historical legacy counts without package calls", async () => {
   const CENTRAL_DB = database(),
     WINTER_DB = database(true),
     SPIDER_DB = database(true);
@@ -109,9 +116,14 @@ it("combines all four sites and preserves historical legacy counts without packa
     path: "/",
     source: "Internal navigation",
   });
+  await record(CENTRAL_DB, {
+    site: "cat.fluri.xyz",
+    path: "/",
+    source: "Google",
+  });
   const r = await readTraffic({ CENTRAL_DB, WINTER_DB, SPIDER_DB }, 30);
-  expect(r.totals.views).toBe(14);
-  expect(r.sites.map((s) => s.views)).toEqual([1, 5, 7, 1]);
+  expect(r.totals.views).toBe(15);
+  expect(r.sites.map((s) => s.views)).toEqual([1, 5, 7, 1, 1]);
   expect(r.sites[1]?.startedAt).toBe("2026-11-08T00:00:00Z");
   expect(r).not.toHaveProperty("packages");
 });
@@ -157,4 +169,39 @@ it("serves authorized traffic and export with no-store, without npm statistics",
   expect(((await r.json()) as { totals: { views: number } }).totals.views).toBe(
     1,
   );
+});
+
+it("theme-subdomain migration preserves existing counters and constraints", () => {
+  const db = new DatabaseSync(":memory:");
+  try {
+    db.exec(
+      readFileSync(
+        new URL("../migrations/0001_central_traffic.sql", import.meta.url),
+        "utf8",
+      ),
+    );
+    db.exec(
+      "INSERT INTO central_daily VALUES('2026-11-14','fluri.xyz','/','Google',27,'2026-11-14T12:00:00Z')",
+    );
+    db.exec(
+      readFileSync(
+        new URL("../migrations/0002_theme_subdomains.sql", import.meta.url),
+        "utf8",
+      ),
+    );
+    expect(
+      db.prepare("SELECT views FROM central_daily WHERE site='fluri.xyz'").get()
+        ?.views,
+    ).toBe(27);
+    db.exec(
+      "INSERT INTO central_daily VALUES('2026-11-14','cat.fluri.xyz','/','Google',1,'2026-11-14T12:00:00Z')",
+    );
+    expect(() =>
+      db.exec(
+        "INSERT INTO central_daily VALUES('2026-11-14','example.com','/','Google',1,'2026-11-14T12:00:00Z')",
+      ),
+    ).toThrow();
+  } finally {
+    db.close();
+  }
 });

@@ -1268,3 +1268,25 @@ img {
     font-size: clamp(42px, 13.2vw, 96px);
   }
 }
+
+.cat-world {
+  background: #ffbd59;
+  color: #191a20;
+}
+.cat-world .world-meta,
+.cat-world .world-enter {
+  border-color: #191a2055;
+}
+.cat-world .world-stage h2 {
+  font-size: clamp(90px, 17.5vw, 275px);
+}
+.cat-world .world-enter {
+  background: #ffbd59;
+}
+.cat-world .world-enter:hover {
+  background: #191a20;
+  color: #ffbd59;
+}
+.cat-world .world-bottom {
+  border-color: #191a2045;
+}

@@ -184,3 +184,26 @@ test("commercial licence explains the lifetime grant, client handover and legacy
     ),
   ).toBe(true);
 });
+
+test("Black Cat loads a scoped preview and links its real demo and licence", async ({
+  page,
+}) => {
+  const errors: string[] = [];
+  page.on("pageerror", (error) => errors.push(error.message));
+  await page.goto("/#black-cat");
+  await expect(page.getByRole("heading", { name: "black cat." })).toBeVisible();
+  await expect(page.locator("canvas[data-fluri-cat]")).toHaveCount(1);
+  await expect(
+    page.getByRole("link", { name: "MAKE ROOM FOR A LITTLE TROUBLE" }),
+  ).toHaveAttribute("href", "https://cat.fluri.xyz/");
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.getByRole("button", { name: "Pause motion", exact: true }).click();
+  await expect(
+    page.getByRole("button", { name: "Resume motion", exact: true }),
+  ).toBeVisible();
+  expect(errors).toEqual([]);
+});
