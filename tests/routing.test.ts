@@ -120,3 +120,22 @@ describe("brand and winter migration gateway", () => {
     expect(env.WINTER.fetch).not.toHaveBeenCalled();
   });
 });
+
+it("serves the new commercial licence locally while preserving historical Winter downloads", async () => {
+  const env = { ASSETS: assets(), WINTER: winter() };
+  await worker.fetch(new Request("https://fluri.xyz/license/"), env);
+  expect(env.ASSETS.fetch).toHaveBeenCalledWith(
+    expect.objectContaining({ url: "https://fluri.xyz/commercial-license/" }),
+  );
+  expect(env.WINTER.fetch).not.toHaveBeenCalled();
+  const raw = await worker.fetch(
+    new Request("https://fluri.xyz/license.txt"),
+    env,
+  );
+  expect(raw.status).toBe(200);
+  const canonical = await worker.fetch(
+    new Request("https://fluri.xyz/license"),
+    env,
+  );
+  expect(canonical.headers.get("Location")).toBe("https://fluri.xyz/license/");
+});

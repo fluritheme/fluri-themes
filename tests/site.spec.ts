@@ -163,3 +163,24 @@ test("Grinch uses the published package and exposes its install and source links
   await expect(page.getByRole("status")).toBeVisible();
   await expect(page.locator("[data-fluri-grinch]")).toHaveCount(1);
 });
+
+test("commercial licence explains the lifetime grant, client handover and legacy releases", async ({
+  page,
+}) => {
+  await page.goto("/commercial-license/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "MAKE IT",
+  );
+  await expect(page.locator("main")).toContainText(
+    "unlimited personal, business and client websites",
+  );
+  await expect(page.locator("main")).toContainText("Existing MIT releases");
+  await expect(
+    page.getByRole("link", { name: "REQUEST YOUR LICENCE" }),
+  ).toHaveAttribute("href", /^mailto:/);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+});

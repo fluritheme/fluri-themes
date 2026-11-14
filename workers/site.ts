@@ -20,7 +20,6 @@ const legacyPages = new Set([
   "community",
   "terms",
   "cookies",
-  "license",
   "playground",
   "readme",
   "reference",
@@ -157,11 +156,7 @@ export default {
             { status: 503, headers: { "Cache-Control": "no-store" } },
           );
     const segment = url.pathname.split("/")[1] ?? "";
-    if (
-      legacyPages.has(segment) ||
-      url.pathname === "/fluri.svg" ||
-      url.pathname === "/license.txt"
-    ) {
+    if (legacyPages.has(segment) || url.pathname === "/fluri.svg") {
       if (!["GET", "HEAD"].includes(request.method))
         return new Response("Method not allowed", {
           status: 405,
@@ -177,7 +172,13 @@ export default {
         status: 405,
         headers: { Allow: "GET, HEAD" },
       });
-    const response = await env.ASSETS.fetch(request);
+    const assetURL = new URL(request.url);
+    if (url.pathname === "/license" || url.pathname === "/license/") {
+      if (url.pathname === "/license")
+        return redirect(new URL("/license/", url));
+      assetURL.pathname = "/commercial-license/";
+    }
+    const response = await env.ASSETS.fetch(new Request(assetURL, request));
     // Hashed assets in old, already-open Winter tabs must keep working after the apex changes.
     if (
       response.status === 404 &&

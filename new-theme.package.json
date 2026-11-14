@@ -1,0 +1,21 @@
+{
+  "name": "@fluritheme/REPLACE_THEME_NAME",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://fluri.xyz/",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "LICENSE-MIT-LEGACY",
+    "LICENSING.md",
+    "licensing.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepublishOnly": "node scripts/check-licensing.mjs"
+  }
+}

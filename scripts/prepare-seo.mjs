@@ -14,7 +14,12 @@ const settings = {
   hub: {
     origin: "https://fluri.xyz",
     public: "public",
-    files: ["index.html", "founder/index.html", "privacy/index.html"],
+    files: [
+      "index.html",
+      "founder/index.html",
+      "privacy/index.html",
+      "commercial-license/index.html",
+    ],
     name: "Fluri Themes",
     image: "https://fluri.xyz/social.png",
     keywords: [
@@ -105,6 +110,8 @@ for (const file of settings.files) {
         ? file.replace(/^demo\/(?:public\/)?/, "")
         : file.replace(/^demo\//, "");
   relative = relative.replace(/index\.html$/, "");
+  if (mode === "hub" && relative === "commercial-license/")
+    relative = "license/";
   const canonical = new URL(
     relative.replace(/\.html$/, ""),
     settings.origin + "/",

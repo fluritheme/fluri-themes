@@ -6,6 +6,7 @@ export default defineConfig({
         home: "index.html",
         privacy: "privacy/index.html",
         founder: "founder/index.html",
+        license: "commercial-license/index.html",
         dashboard: "dashboard/index.html",
       },
     },

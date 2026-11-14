@@ -48,3 +48,7 @@ Apply `migrations/0001_central_traffic.sql` to `CENTRAL_DB` before first deploym
 ## Search verification
 
 `pnpm build` prepares canonical metadata, structured data, robots rules, sitemaps and IndexNow manifests. `node scripts/audit-seo.mjs` checks the deployed public pages. Search-provider submission results are recorded in `docs/search-console-verification.json`; accepted submissions do not guarantee indexing or AI citations.
+
+## Commercial licensing
+
+Future/current commercial editions use [Fluri Themes Commercial License 1.0](https://fluri.xyz/license/). Read [LICENSING.md](LICENSING.md) and licensing.json for the legacy MIT version boundaries. New packages must follow AGENTS.md and include the shared licence files. The collection currently previews the already-published MIT editions until commercial package publication completes. The public license page provides an inbound licence-request link; automated checkout and customer access are separate work.

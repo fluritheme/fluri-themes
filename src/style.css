@@ -1211,3 +1211,60 @@ img {
     right: 24px;
   }
 }
+
+.license-page {
+  padding-top: 0;
+}
+.license-hero {
+  background: #ff784f;
+  color: #191719;
+  padding: 70px max(24px, 7vw);
+}
+.license-hero h1 {
+  font-size: clamp(60px, 10vw, 156px);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  margin: 36px 0;
+}
+.license-hero > p {
+  max-width: 750px;
+  font-size: clamp(20px, 2.4vw, 30px);
+  line-height: 1.4;
+}
+.license-contact {
+  display: inline-block;
+  padding: 18px 24px;
+  margin: 16px 0;
+  background: #191719;
+  color: white;
+  font-weight: 700;
+}
+.license-hero .license-note {
+  max-width: 720px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.license-details {
+  max-width: 950px;
+  margin: auto;
+  padding: 64px 24px;
+  overflow-wrap: anywhere;
+}
+.license-details h2 {
+  margin-top: 44px;
+  font-size: 26px;
+}
+.license-details p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #d8d8dc;
+}
+.license-details a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 760px) {
+  .license-hero h1 {
+    font-size: clamp(42px, 13.2vw, 96px);
+  }
+}
