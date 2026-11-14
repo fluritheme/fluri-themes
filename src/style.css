@@ -1214,37 +1214,40 @@ img {
 }
 
 .grinch-world {
-  background: #b9e94b;
-  color: #153629;
-}
-.grinch-world .world-meta {
-  border-color: #15362955;
-}
-.grinch-world .world-story {
-  margin-bottom: 170px;
+  background: #1f6544;
+  color: #fff5df;
 }
 .grinch-world .world-enter {
-  background: #c92c42;
-  color: #fff5df;
-  border-color: #153629;
-  min-height: 190px;
+  background: #1f6544;
 }
 .grinch-world .world-enter:hover {
-  background: #153629;
-  color: #fff5df;
+  background: #fff5df;
+  color: #1f6544;
 }
 .preview-note {
-  font: 10px/1.6 monospace;
-  letter-spacing: 0.05em;
+  font: 11px monospace;
+  padding: 15px 0;
+  border-bottom: 1px solid #ffffff68;
+  white-space: nowrap;
 }
-@media (max-width: 600px) {
-  .grinch-world .world-story {
-    margin-bottom: 150px;
+
+@media (max-width: 760px) {
+  .world-bottom > .preview-note {
+    font-size: 10px;
+    padding: 0 0 8px;
   }
-  .grinch-world .world-enter {
-    min-height: 190px;
-  }
-  .grinch-world .world-bottom {
-    align-items: flex-start;
+}
+
+.grinch-ledge {
+  position: absolute;
+  right: 100px;
+  bottom: -4px;
+  width: 48px;
+  height: 12px;
+  pointer-events: none;
+}
+@media (max-width: 760px) {
+  .grinch-ledge {
+    right: 24px;
   }
 }

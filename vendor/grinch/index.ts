@@ -319,13 +319,16 @@ export function createGrinch(input: GrinchOptions = {}): GrinchController {
           ),
         );
     if (button) {
-      button.textContent = reduced
+      const label = reduced
         ? 'Motion reduced'
         : state === 'paused'
           ? 'Resume Grinch'
           : 'Pause Grinch';
-      button.disabled = reduced;
-      button.setAttribute('aria-pressed', String(state === 'paused' || reduced));
+      if (button.textContent !== label) button.textContent = label;
+      if (button.disabled !== reduced) button.disabled = reduced;
+      const pressed = String(state === 'paused' || reduced);
+      if (button.getAttribute('aria-pressed') !== pressed)
+        button.setAttribute('aria-pressed', pressed);
     }
   }
   function schedule(): void {

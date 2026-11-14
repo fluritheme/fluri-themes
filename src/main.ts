@@ -104,7 +104,7 @@ async function mount(theme: Theme): Promise<void> {
         territory: "root",
         targets: "[data-grinch-gift]",
         objects: "[data-grinch-object]",
-        size: 1.15,
+        size: 0.85,
         fearRadius: 80,
         cooldown: 10,
         zIndex: 4,
