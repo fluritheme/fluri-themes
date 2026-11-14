@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      name="description"
+      content="Private Fluri website traffic dashboard."
+    />
+    <title>Fluri — Private traffic dashboard</title>
+    <link rel="icon" href="/brand-mark-128.png" />
+    <link rel="stylesheet" href="/src/dashboard.css" />
+    <script type="module" src="/src/dashboard.ts"></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">fluri<span>PRIVATE / ANALYTICS</span></a
+      ><a href="/">Back to the collection ↗</a>
+    </header>
+    <main>
+      <div class="intro">
+        <p class="eyebrow">ONE COLLECTION. ONE CLEARER PICTURE.</p>
+        <h1>A little perspective.</h1>
+        <p>Website traffic across Fluri, Winter, Spider and Grinch.</p>
+      </div>
+      <p id="notice" role="status" aria-live="polite"></p>
+      <section id="login" class="login">
+        <span class="eyebrow">OPERATOR ACCESS</span>
+        <h2>Welcome back.</h2>
+        <p>Use your existing dashboard access key.</p>
+        <form id="login-form">
+          <label for="password">Access key</label
+          ><input
+            id="password"
+            type="password"
+            required
+            maxlength="256"
+            autocomplete="current-password"
+          /><button type="submit">Open dashboard ↗</button>
+        </form>
+      </section>
+      <section id="report" hidden>
+        <div class="toolbar">
+          <div class="scope" role="group" aria-label="Website">
+            <button data-site="all" aria-pressed="true">All sites</button
+            ><button data-site="fluri.xyz" aria-pressed="false">Main</button
+            ><button data-site="winter.fluri.xyz" aria-pressed="false">
+              Winter</button
+            ><button data-site="spider.fluri.xyz" aria-pressed="false">
+              Spider</button
+            ><button data-site="grinch.fluri.xyz" aria-pressed="false">
+              Grinch
+            </button>
+          </div>
+          <label
+            >Period
+            <select id="period" aria-label="Period">
+              <option value="7">7 days</option>
+              <option value="30" selected>30 days</option>
+              <option value="90">90 days</option>
+            </select></label
+          ><button id="refresh">Refresh ↻</button
+          ><a id="export" href="/api/dashboard/export?days=30">Export JSON ↗</a
+          ><button id="logout">Sign out</button>
+        </div>
+        <div id="metrics" class="metrics"></div>
+        <section class="panel">
+          <div class="panel-heading">
+            <h2 id="chart-title">Daily page views</h2>
+            <span id="period-label"></span>
+          </div>
+          <svg
+            id="chart"
+            viewBox="0 0 960 240"
+            role="img"
+            aria-labelledby="chart-title chart-description"
+          >
+            <desc id="chart-description"></desc>
+          </svg>
+          <details>
+            <summary>View daily numbers</summary>
+            <div id="daily-table"></div>
+          </details>
+        </section>
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Each little world.</h2>
+            <span>Page views in the selected period</span>
+          </div>
+          <div id="sites" class="site-grid"></div>
+        </section>
+        <div class="breakdown">
+          <section class="panel">
+            <h2>Pages</h2>
+            <div id="pages"></div>
+          </section>
+          <section class="panel">
+            <h2>Where visits came from</h2>
+            <div id="sources"></div>
+          </section>
+        </div>
+        <p class="footnote">
+          Page views are document requests, not unique visitors. Counts exclude
+          recognized bots, prefetches, the dashboard and API requests, and
+          respect DNT and Global Privacy Control. Source categories come from
+          the request referrer; missing referrers appear as direct / unknown. No
+          IP addresses, query strings or visitor identifiers are stored.
+        </p>
+        <p class="footnote">
+          Winter and Spider retain their earlier traffic history. Main-site and
+          Grinch measurement starts with this dashboard. Up to 90 days of
+          aggregate data is retained; all dates use UTC.
+        </p>
+        <p id="updated" class="footnote"></p>
+      </section>
+    </main>
+    <footer>FLURI THEMES / PRIVATE TRAFFIC ANALYTICS</footer>
+  </body>
+</html>

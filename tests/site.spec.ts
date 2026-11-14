@@ -75,7 +75,7 @@ test("motion preferences and desktop custom cursor remain accessible", async ({
     await expect
       .poll(async () => {
         const box = await page.locator(".custom-pointer").boundingBox();
-        return box ? Math.round(box.x + box.width / 2) : null;
+        return box ? Math.round(box.x + 20) : null;
       })
       .toBe(150);
     await page.keyboard.press("Tab");
@@ -139,7 +139,7 @@ test("founder biography is crawlable and links the real projects and identity", 
   ).toBe(true);
 });
 
-test("Grinch preview links to its playground without an unavailable install", async ({
+test("Grinch uses the published package and exposes its install and source links", async ({
   page,
 }) => {
   await page.goto("/");
@@ -148,7 +148,18 @@ test("Grinch preview links to its playground without an unavailable install", as
   await expect(
     section.getByRole("link", { name: "LET THE MISCHIEF IN" }),
   ).toHaveAttribute("href", "https://grinch.fluri.xyz/");
-  await expect(section).toContainText("PACKAGE COMING SOON");
-  await expect(section.locator("[data-copy]")).toHaveCount(0);
+  await expect(section.getByRole("link", { name: "SOURCE" })).toHaveAttribute(
+    "href",
+    "https://github.com/fluritheme/grinch",
+  );
+  const install = section.getByRole("button", {
+    name: "Copy Grinch installation command",
+  });
+  await expect(install).toHaveAttribute(
+    "data-copy",
+    "npm install @fluritheme/grinch",
+  );
+  await install.click();
+  await expect(page.getByRole("status")).toBeVisible();
   await expect(page.locator("[data-fluri-grinch]")).toHaveCount(1);
 });

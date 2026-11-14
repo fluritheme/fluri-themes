@@ -7,6 +7,24 @@
   "preview_urls": false,
   "routes": [{ "pattern": "fluri.xyz", "custom_domain": true }],
   "services": [{ "binding": "WINTER", "service": "fluri" }],
+  "d1_databases": [
+    {
+      "binding": "CENTRAL_DB",
+      "database_name": "fluri-site-analytics",
+      "database_id": "e370034a-1c15-43e7-8468-a43808d8a270",
+      "migrations_dir": "migrations",
+    },
+    {
+      "binding": "WINTER_DB",
+      "database_name": "fluri-participation",
+      "database_id": "cf122b29-03b7-4eea-a3a6-489076da63c5",
+    },
+    {
+      "binding": "SPIDER_DB",
+      "database_name": "spider-analytics",
+      "database_id": "47a4ea67-4133-4a3d-a6d4-be01c00b1060",
+    },
+  ],
   "assets": {
     "binding": "ASSETS",
     "directory": "./dist",

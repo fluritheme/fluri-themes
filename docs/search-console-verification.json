@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-11-14",
+  "googleSitemapLiveTests": [
+    {
+      "url": "https://fluri.xyz/sitemap.xml",
+      "googleLiveFetch": "successful",
+      "crawlingAllowed": true
+    },
+    {
+      "url": "https://winter.fluri.xyz/sitemap.xml",
+      "googleLiveFetch": "successful",
+      "crawlingAllowed": true
+    },
+    {
+      "url": "https://spider.fluri.xyz/sitemap.xml",
+      "googleLiveFetch": "successful",
+      "crawlingAllowed": true
+    },
+    {
+      "url": "https://grinch.fluri.xyz/sitemap.xml",
+      "googleLiveFetch": "successful",
+      "crawlingAllowed": true
+    }
+  ],
+  "googleSitemapsReport": "Could not fetch; investigation found no XML or live-access failure. Pending provider processing.",
+  "bing": {
+    "verifiedSites": [
+      "https://fluri.xyz/",
+      "https://winter.fluri.xyz/",
+      "https://spider.fluri.xyz/",
+      "https://grinch.fluri.xyz/"
+    ],
+    "sitemaps": "All four successfully processed",
+    "errors": 0,
+    "sitemapResults": [
+      {
+        "host": "fluri.xyz",
+        "success": true,
+        "discoveredPages": 3,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "host": "winter.fluri.xyz",
+        "success": true,
+        "discoveredPages": 15,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "host": "spider.fluri.xyz",
+        "success": true,
+        "discoveredPages": 4,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "host": "grinch.fluri.xyz",
+        "success": true,
+        "discoveredPages": 1,
+        "errors": 0,
+        "warnings": 0
+      }
+    ]
+  },
+  "googleManualActions": "No issues detected",
+  "googleResubmittedAfterLiveTests": [
+    {
+      "url": "https://fluri.xyz/sitemap.xml",
+      "accepted": true
+    },
+    {
+      "url": "https://winter.fluri.xyz/sitemap.xml",
+      "accepted": true
+    },
+    {
+      "url": "https://spider.fluri.xyz/sitemap.xml",
+      "accepted": true
+    },
+    {
+      "url": "https://grinch.fluri.xyz/sitemap.xml",
+      "accepted": true
+    }
+  ]
+}

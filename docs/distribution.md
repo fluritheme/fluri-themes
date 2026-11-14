@@ -32,3 +32,11 @@ Skypack returned 404 and npms.io had not indexed these packages during verificat
 - Google Search Console submission and individual search-engine indexing status were not verified in this run. Search rankings, AI responses and recommendations are controlled by the services, not the site owner.
 
 IndexNow ownership verification files are public identifiers and are committed with the static sites. Keep them available for engine verification. Do not expose private dashboard routes in sitemaps or structured data.
+
+## Update — 14 November 2026
+
+Grinch now has a [public source repository](https://github.com/fluritheme/grinch) and a [live playground](https://grinch.fluri.xyz/). Its first npm release is `@fluritheme/grinch@0.1.0`. The earlier table records the 8 November distribution check; it is not a current version manifest.
+
+The Google domain property covers all four hosts. All four sitemap URLs were submitted, then independently fetched successfully through Google's live URL test, with crawling allowed. The Sitemaps report still shows “Could not fetch”; no XML or live-access failure was found, and Google reports no manual actions. Do not label this report successful until Google confirms processing.
+
+Bing ownership was verified for all four hosts and all four sitemaps show Success, with 23 discovered pages in total and no reported errors or warnings. IndexNow accepted all 23 canonical public URLs with HTTP 200 in the final check. [Search verification record](search-console-verification.json).

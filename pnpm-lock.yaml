@@ -10,6 +10,9 @@ importers:
       "@fluritheme/fluri":
         specifier: 0.2.0
         version: 0.2.0
+      "@fluritheme/grinch":
+        specifier: 0.1.0
+        version: 0.1.0
       "@fluritheme/spider":
         specifier: 0.2.0
         version: 0.2.0
@@ -353,6 +356,13 @@ packages:
       {
         integrity: sha512-fVKJRnQMfYWs2H/sA4si+awdwA2ywslszByK1OXIJUGCGM9/cdhbHv5MsljT2KgZPAj9mjWDr74hXjN/6Tw8bA==,
       }
+
+  "@fluritheme/grinch@0.1.0":
+    resolution:
+      {
+        integrity: sha512-M0rOpIFYcevC7fFqy51ozSl7nTZyFD+eTRVY8ujVPjCwmW2W2bJQXPCCwL35FFDVFYQeIKADrKr2O18NnpFKwA==,
+      }
+    engines: { node: ">=22.12" }
 
   "@fluritheme/spider@0.2.0":
     resolution:
@@ -1521,6 +1531,8 @@ snapshots:
   "@fluritheme/fluri@0.2.0":
     dependencies:
       zod: 4.6.7
+
+  "@fluritheme/grinch@0.1.0": {}
 
   "@fluritheme/spider@0.2.0": {}
 

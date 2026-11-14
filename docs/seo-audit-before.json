@@ -1,0 +1,452 @@
+[
+  {
+    "host": "fluri.xyz",
+    "robots": "User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /dashboard\nSitemap: https://fluri.xyz/sitemap.xml\n",
+    "urls": [
+      "https://fluri.xyz/",
+      "https://fluri.xyz/privacy/",
+      "https://fluri.xyz/founder/"
+    ],
+    "pages": [
+      {
+        "url": "https://fluri.xyz/",
+        "status": 200,
+        "title": "\n      Fluri Themes — Open-source website effects by František Gejdoš\n    ",
+        "description": "Little details. A little delight. Explore Winter, Spider and Grinch: open-source website effects by František Gejdoš, founder of Fluri Themes.",
+        "robots": null,
+        "canonical": "https://fluri.xyz/",
+        "h1s": ["SMALL CODE.  BIG FEELING. "],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://fluri.xyz/social.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://fluri.xyz/privacy/",
+        "status": 200,
+        "title": "Privacy — Fluri Themes",
+        "description": "Privacy, hosting and interactive previews on the Fluri Themes collection website.",
+        "robots": null,
+        "canonical": "https://fluri.xyz/privacy/",
+        "h1s": ["A little  footprint. "],
+        "schema": false,
+        "validSchema": true,
+        "ogImage": null,
+        "xRobots": null
+      },
+      {
+        "url": "https://fluri.xyz/founder/",
+        "status": 200,
+        "title": "František Gejdoš — Founder of Fluri Themes",
+        "description": "František Gejdoš (Frantisek Gejdos) is the founder of Fluri Themes and creator of Winter, Spider and Grinch, open-source interactive website effects.",
+        "robots": null,
+        "canonical": "https://fluri.xyz/founder/",
+        "h1s": ["FRANTIŠEK  GEJDOŠ."],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://fluri.xyz/founder-1200.jpg",
+        "xRobots": null
+      }
+    ],
+    "bots": [
+      {
+        "ua": "Googlebot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "bingbot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "OAI-SearchBot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "Claude-SearchBot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "PerplexityBot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      }
+    ]
+  },
+  {
+    "host": "winter.fluri.xyz",
+    "robots": "User-agent: *\nAllow: /\nDisallow: /dashboard/\nDisallow: /api/\nSitemap: https://winter.fluri.xyz/sitemap.xml\n",
+    "urls": [
+      "https://winter.fluri.xyz/participate/",
+      "https://winter.fluri.xyz/community/",
+      "https://winter.fluri.xyz/",
+      "https://winter.fluri.xyz/features/",
+      "https://winter.fluri.xyz/showcase/",
+      "https://winter.fluri.xyz/docs/",
+      "https://winter.fluri.xyz/about/",
+      "https://winter.fluri.xyz/changelog/",
+      "https://winter.fluri.xyz/privacy/",
+      "https://winter.fluri.xyz/terms/",
+      "https://winter.fluri.xyz/cookies/",
+      "https://winter.fluri.xyz/license/",
+      "https://winter.fluri.xyz/playground/"
+    ],
+    "pages": [
+      {
+        "url": "https://winter.fluri.xyz/participate/",
+        "status": 200,
+        "title": "Participate — Share your winter · Winter by Fluri",
+        "description": "Register your website, verify your domain, and choose optional aggregate reporting and a public Fluri community listing.",
+        "robots": null,
+        "canonical": "https://winter.fluri.xyz/participate/",
+        "h1s": ["A place for  your snowfall. "],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://winter.fluri.xyz/art/social-card.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://winter.fluri.xyz/community/",
+        "status": 200,
+        "title": "Community — Winter in the wild · Winter by Fluri",
+        "description": "Explore owner-approved websites using Fluri and share your own snow integration with the community.",
+        "robots": null,
+        "canonical": "https://winter.fluri.xyz/community/",
+        "h1s": ["Small details.  Real websites. "],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://winter.fluri.xyz/art/social-card.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://winter.fluri.xyz/",
+        "status": 200,
+        "title": "Winter by Fluri — Interactive snow effects for JavaScript, TypeScript &amp; React",
+        "description": "Turn ordinary interfaces into little winter landscapes. Explore interactive snowfall, DOM-aware accumulation, and a playful TypeScript snow engine.",
+        "robots": null,
+        "canonical": "https://winter.fluri.xyz/",
+        "h1s": ["winter."],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://winter.fluri.xyz/art/social-card.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://winter.fluri.xyz/features/",
+        "status": 200,
+        "title": "Features — Thoughtful snow for your interface · Winter by Fluri",
+        "description": "Discover Fluri’s surface-aware snow, interactions, adaptive performance, accessible motion controls, and optional Christmas effects.",
+        "robots": null,
+        "canonical": "https://winter.fluri.xyz/features/",
+        "h1s": ["A little atmosphere.  Real thought underneath. "],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://winter.fluri.xyz/art/social-card.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://winter.fluri.xyz/showcase/",
+        "status": 200,
+        "title": "Showcase — Find your kind of winter · Winter by Fluri",
+        "description": "Try all ten Fluri snowfall presets in a live interactive preview. From a minimal dusting to a glowing Christmas night, make the forecast yours.",
+        "robots": null,
+        "canonical": "https://winter.fluri.xyz/showcase/",
+        "h1s": ["Find your  kind of snowfall. "],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://winter.fluri.xyz/art/social-card.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://winter.fluri.xyz/docs/",
+        "status": 200,
+        "title": "Documentation — Your first snowfall · Winter by Fluri",
+        "description": "Install Fluri, add snowy surfaces, and integrate the TypeScript snow engine with React, Vue, or your own framework. Read configuration and lifecycle guidance.",
+        "robots": null,
+        "canonical": "https://winter.fluri.xyz/docs/",
+        "h1s": ["From the first flake  to your own forecast. "],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://winter.fluri.xyz/art/social-card.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://winter.fluri.xyz/about/",
+        "status": 200,
+        "title": "About — Behind the snow · Winter by Fluri",
+        "description": "Meet Fluri: a TypeScript snow library by Frantisek Gejdos, built around thoughtful effects, playful details, and an open MIT license.",
+        "robots": null,
+        "canonical": "https://winter.fluri.xyz/about/",
+        "h1s": ["The web can use  a little more wonder. "],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://winter.fluri.xyz/art/social-card.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://winter.fluri.xyz/changelog/",
+        "status": 200,
+        "title": "Changelog — The latest forecast · Winter by Fluri",
+        "description": "Follow improvements to Fluri’s snow physics, interactive playground, framework integrations, performance, and seasonal effects.",
+        "robots": null,
+        "canonical": "https://winter.fluri.xyz/changelog/",
+        "h1s": ["What’s new  in Fluri. "],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://winter.fluri.xyz/art/social-card.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://winter.fluri.xyz/privacy/",
+        "status": 200,
+        "title": "Privacy policy",
+        "description": "How Fluri handles website requests, optional website participation, aggregate reports, and your choices.",
+        "robots": null,
+        "canonical": "https://winter.fluri.xyz/privacy/",
+        "h1s": ["Privacy policy"],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://winter.fluri.xyz/art/social-card.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://winter.fluri.xyz/terms/",
+        "status": 200,
+        "title": "Website terms",
+        "description": "Straightforward terms for exploring the Fluri website, previews, documentation, and downloads.",
+        "robots": null,
+        "canonical": "https://winter.fluri.xyz/terms/",
+        "h1s": ["Website terms"],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://winter.fluri.xyz/art/social-card.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://winter.fluri.xyz/cookies/",
+        "status": 200,
+        "title": "Cookies &amp; local storage",
+        "description": "The small preferences Fluri can remember on your device, and how you can remove them.",
+        "robots": null,
+        "canonical": "https://winter.fluri.xyz/cookies/",
+        "h1s": ["Cookies & local storage"],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://winter.fluri.xyz/art/social-card.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://winter.fluri.xyz/license/",
+        "status": 200,
+        "title": "The MIT license",
+        "description": "Free to use, adapt, and share. Read the complete license that accompanies Fluri.",
+        "robots": null,
+        "canonical": "https://winter.fluri.xyz/license/",
+        "h1s": ["The MIT license"],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://winter.fluri.xyz/art/social-card.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://winter.fluri.xyz/playground/",
+        "status": 200,
+        "title": "Winter Playground by Fluri — Change the forecast",
+        "description": "Make winter your own. Explore Fluri",
+        "robots": null,
+        "h1s": [],
+        "schema": false,
+        "validSchema": true,
+        "ogImage": null,
+        "xRobots": null
+      }
+    ],
+    "bots": [
+      {
+        "ua": "Googlebot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "bingbot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "OAI-SearchBot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "Claude-SearchBot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "PerplexityBot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      }
+    ]
+  },
+  {
+    "host": "spider.fluri.xyz",
+    "robots": "User-agent: *\nAllow: /\nDisallow: /dashboard\nDisallow: /api/\nSitemap: https://spider.fluri.xyz/sitemap.xml\n",
+    "urls": [
+      "https://spider.fluri.xyz/",
+      "https://spider.fluri.xyz/privacy/",
+      "https://spider.fluri.xyz/framer/",
+      "https://spider.fluri.xyz/framer/guide.html"
+    ],
+    "pages": [
+      {
+        "url": "https://spider.fluri.xyz/",
+        "status": 200,
+        "title": "Spider by Fluri — Animated website spider &amp; realistic webs",
+        "description": "An expressive little spider that makes your website its home. Watch it descend, weave real silk between letters, hunt passing flies, and hide behind your content.",
+        "robots": null,
+        "canonical": "https://spider.fluri.xyz/",
+        "h1s": ["spider."],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://spider.fluri.xyz/social.png",
+        "xRobots": null
+      },
+      {
+        "url": "https://spider.fluri.xyz/privacy/",
+        "status": 200,
+        "title": "Spider — privacy & measurement",
+        "description": "How Spider counts website traffic, and what the package never collects.",
+        "robots": null,
+        "canonical": "https://spider.fluri.xyz/privacy/",
+        "h1s": ["A small  footprint. "],
+        "schema": false,
+        "validSchema": true,
+        "ogImage": null,
+        "xRobots": null
+      },
+      {
+        "url": "https://spider.fluri.xyz/framer/",
+        "status": 200,
+        "title": "Spider for Framer — A little life for your website | Fluri Themes",
+        "description": "A curious spider for Framer that descends on silk, wanders your page, hides behind objects and gradually weaves webs. Created by František Gejdoš.",
+        "robots": null,
+        "canonical": "https://spider.fluri.xyz/framer/",
+        "h1s": [],
+        "schema": false,
+        "validSchema": true,
+        "ogImage": "https://spider.fluri.xyz/framer/previews/social.jpg",
+        "xRobots": null
+      },
+      {
+        "url": "https://spider.fluri.xyz/framer/guide.html",
+        "status": 200,
+        "title": "Spider for Framer — Setup",
+        "description": null,
+        "robots": null,
+        "h1s": ["A new resident. A few small steps."],
+        "schema": false,
+        "validSchema": true,
+        "ogImage": null,
+        "xRobots": null
+      }
+    ],
+    "bots": [
+      {
+        "ua": "Googlebot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "bingbot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "OAI-SearchBot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "Claude-SearchBot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "PerplexityBot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      }
+    ]
+  },
+  {
+    "host": "grinch.fluri.xyz",
+    "robots": "User-agent: *\nAllow: /\nSitemap: https://grinch.fluri.xyz/sitemap.xml\n",
+    "urls": ["https://grinch.fluri.xyz/"],
+    "pages": [
+      {
+        "url": "https://grinch.fluri.xyz/",
+        "status": 200,
+        "title": "Grinch by Fluri — A little holiday mischief for your website",
+        "description": "A mischievous green holiday visitor for your website. Watch him sneak, climb, steal illustrated presents, hide behind cards, and find a little kindness. Try the interactive preview from Fluri Themes.",
+        "robots": null,
+        "canonical": "https://grinch.fluri.xyz/",
+        "h1s": ["grinch."],
+        "schema": true,
+        "validSchema": true,
+        "ogImage": "https://grinch.fluri.xyz/social.png",
+        "xRobots": null
+      }
+    ],
+    "bots": [
+      {
+        "ua": "Googlebot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "bingbot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "OAI-SearchBot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "Claude-SearchBot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      },
+      {
+        "ua": "PerplexityBot",
+        "status": 200,
+        "challenge": null,
+        "xRobots": null
+      }
+    ]
+  }
+]

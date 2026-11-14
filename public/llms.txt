@@ -9,6 +9,6 @@ An independent collection of open-source website effects founded by František G
 - Source: https://github.com/fluritheme
 - Privacy: https://fluri.xyz/privacy/
 
-The runtime libraries do not report visitors or installations. Each product's documentation, playground and private dashboard live on its own subdomain. Former snow-product paths at fluri.xyz redirect to Winter; legacy APIs remain compatible.
+The runtime libraries do not report visitors or installations. Each product's documentation and playground live on its own subdomain. Website traffic is combined in one private dashboard at https://fluri.xyz/dashboard/; former subdomain dashboards redirect there. Former snow-product paths at fluri.xyz redirect to Winter; legacy APIs remain compatible.
 
-- Grinch preview: https://grinch.fluri.xyz/ — a holiday character with animated gift heists, hiding and kindness mode. npm package is not published yet.
+- Grinch: https://grinch.fluri.xyz/ — a holiday character with animated gift heists, hiding and kindness mode. npm: @fluritheme/grinch. Source: https://github.com/fluritheme/grinch.

@@ -1,6 +1,6 @@
 import "./style.css";
 import type { WeatherController } from "@fluritheme/fluri";
-import type { GrinchController } from "../vendor/grinch/index.js";
+import type { GrinchController } from "@fluritheme/grinch";
 import type { SpiderController } from "@fluritheme/spider";
 type Theme = {
   element: HTMLElement;
@@ -97,17 +97,27 @@ async function mount(theme: Theme): Promise<void> {
         zIndex: 4,
       });
     } else {
-      const { createGrinch } = await import("../vendor/grinch/index.js");
+      const { createGrinch } = await import("@fluritheme/grinch");
       if (destroyed) return;
-      theme.controller = createGrinch({
+      const grinch = createGrinch({
         root: theme.element,
         territory: "root",
         targets: "[data-grinch-gift]",
         objects: "[data-grinch-object]",
         size: 0.85,
+        entrance: "rope",
+        speed: 2,
         fearRadius: 80,
         cooldown: 10,
         zIndex: 4,
+      });
+      theme.controller = grinch;
+      let landed = false;
+      grinch.on("phase", ({ phase }) => {
+        if (landed || phase !== "waving") return;
+        landed = true;
+        grinch.update({ speed: 1.3 });
+        grinch.steal();
       });
     }
     reconcile();
@@ -123,7 +133,7 @@ const observer = new IntersectionObserver(
       const theme = themes.find((item) => item.element === entry.target);
       if (theme) {
         theme.visible = entry.isIntersecting;
-        if (theme.visible) void mount(theme);
+        if (theme.visible && theme.type !== "grinch") void mount(theme);
       }
     }
     reconcile();
@@ -131,6 +141,19 @@ const observer = new IntersectionObserver(
   { rootMargin: "80px" },
 );
 for (const theme of themes) observer.observe(theme.element);
+// Wait for the present itself so an early section intersection cannot place him
+// at a fallback point far from the gift while it is still below the viewport.
+const grinchTheme = themes.find((theme) => theme.type === "grinch");
+const present = grinchTheme?.element.querySelector("[data-grinch-gift]");
+const presentObserver = new IntersectionObserver((entries) => {
+  if (!grinchTheme) return;
+  for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
+    void mount(grinchTheme);
+    presentObserver.unobserve(entry.target);
+  }
+});
+if (present) presentObserver.observe(present);
 button?.addEventListener("click", () => {
   stopped = !stopped;
   reconcile();
@@ -144,6 +167,7 @@ window.addEventListener(
     destroyed = true;
     for (const theme of themes) theme.controller?.destroy();
     observer.disconnect();
+    presentObserver.disconnect();
   },
   { once: true },
 );
@@ -171,9 +195,6 @@ const pointer = document.createElement("div");
 pointer.className = "custom-pointer";
 pointer.setAttribute("aria-hidden", "true");
 pointer.hidden = true;
-const pointerArrow = document.createElement("span");
-pointerArrow.textContent = "↗";
-pointer.append(pointerArrow);
 document.body.append(pointer);
 let pointerFrame: number | undefined,
   pointX = 0,
@@ -207,7 +228,7 @@ document.addEventListener(
     document.documentElement.classList.add("custom-cursor");
     if (pointerFrame === undefined)
       pointerFrame = requestAnimationFrame(() => {
-        pointer.style.transform = `translate3d(${pointX - 21}px,${pointY - 21}px,0)`;
+        pointer.style.transform = `translate3d(${pointX - 20}px,${pointY - 4}px,0)`;
         pointerFrame = undefined;
       });
   },

@@ -1076,7 +1076,7 @@ img {
   a,
   button {
     cursor:
-      url("/cursor.svg") 6 5,
+      url("/cursor.svg") 20 4,
       auto;
   }
   html.custom-cursor,
@@ -1087,54 +1087,22 @@ img {
     position: fixed;
     left: 0;
     top: 0;
-    width: 0;
-    height: 0;
+    width: 48px;
+    height: 56px;
     pointer-events: none;
     z-index: 2147483647;
-    mix-blend-mode: difference;
+    filter: drop-shadow(1px 2px 1px #0003);
   }
-  .custom-pointer:before {
+  .custom-pointer::before {
     content: "";
     position: absolute;
-    width: 42px;
-    height: 42px;
-    border: 1.5px solid #fff;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition:
-      width 0.16s,
-      height 0.16s,
-      background 0.16s;
+    inset: 0;
+    background: url("/cursor.svg") center/contain no-repeat;
+    transform-origin: 20px 4px;
+    transition: transform 0.12s ease;
   }
-  .custom-pointer:after {
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #fff;
-    transform: translate(-50%, -50%);
-  }
-  .custom-pointer > span {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    color: #000;
-    font:
-      25px/1 DM,
-      Arial,
-      sans-serif;
-    opacity: 0;
-  }
-  .custom-pointer[data-interactive="true"]:before {
-    width: 62px;
-    height: 62px;
-    background: #fff;
-  }
-  .custom-pointer[data-interactive="true"]:after {
-    display: none;
-  }
-  .custom-pointer[data-interactive="true"] > span {
-    opacity: 1;
+  .custom-pointer[data-interactive="true"]::before {
+    transform: scale(1.08);
   }
   .custom-pointer[hidden] {
     display: none;
@@ -1145,17 +1113,9 @@ img {
     display: none !important;
   }
 }
-
-@media (hover: hover) and (pointer: fine) {
-  .custom-pointer {
-    width: 42px;
-    height: 42px;
-  }
-  .custom-pointer:before,
-  .custom-pointer:after,
-  .custom-pointer > span {
-    left: 50%;
-    top: 50%;
+@media (prefers-reduced-motion: reduce) {
+  .custom-pointer::before {
+    transition: none;
   }
 }
 

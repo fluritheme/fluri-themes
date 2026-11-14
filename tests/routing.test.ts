@@ -31,14 +31,13 @@ describe("brand and winter migration gateway", () => {
       expect(env.ASSETS.fetch).not.toHaveBeenCalled();
     },
   );
-  it("keeps private dashboard redirects uncacheable", async () => {
+  it("serves the main private dashboard without redirecting", async () => {
     const response = await worker.fetch(
       new Request("https://fluri.xyz/dashboard"),
       { ASSETS: assets(), WINTER: winter() },
     );
-    expect(response.headers.get("Location")).toBe(
-      "https://winter.fluri.xyz/dashboard",
-    );
+    expect(response.status).toBe(200);
+    expect(response.headers.get("Location")).toBeNull();
     expect(response.headers.get("Cache-Control")).toBe("no-store");
     expect(response.headers.get("X-Robots-Tag")).toContain("noindex");
   });

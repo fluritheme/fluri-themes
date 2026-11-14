@@ -6,7 +6,7 @@
   "packageManager": "pnpm@10.33.2",
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5200",
-    "build": "vite build",
+    "build": "node scripts/prepare-seo.mjs hub && vite build",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:browser": "playwright test",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@fluritheme/fluri": "0.2.0",
+    "@fluritheme/grinch": "0.1.0",
     "@fluritheme/spider": "0.2.0"
   }
 }
