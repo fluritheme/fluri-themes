@@ -31,5 +31,13 @@
     "rain": 202,
     "hub": 200
   },
-  "workerVersion": "0d65d9c3-9b93-49ad-acc7-c1549ac24956"
+  "workerVersion": "0d65d9c3-9b93-49ad-acc7-c1549ac24956",
+  "hubCI": {
+    "run": 43625026279,
+    "conclusion": "success"
+  },
+  "hubUnitTests": 16,
+  "hubBrowserTests": 40,
+  "liveCatalogueVerified": true,
+  "masterSitemapIncludesRain": true
 }
