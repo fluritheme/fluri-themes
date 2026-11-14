@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-11-14T18:52:47.214Z",
+  "package": "@fluritheme/tiny-builders",
+  "version": "0.1.0",
+  "npmStatus": "Not published: npm security-check session expired; a fresh verification is required.",
+  "demo": "https://builders.fluri.xyz/",
+  "homepage": "https://fluri.xyz/",
+  "license": "SEE LICENSE IN LICENSE",
+  "privateRepository": "https://github.com/fluritheme/tiny-builders",
+  "workerVersion": "f051facc-fd76-4b91-a3b8-1fde89597e9d",
+  "hubWorkerVersion": "e62776e7-26e7-4ac6-9e50-648096b900bb",
+  "unitTests": 23,
+  "browserTests": 32,
+  "hubUnitTests": 16,
+  "hubBrowserTests": 44,
+  "packageCI": {
+    "run": 43628383655,
+    "conclusion": "success"
+  },
+  "hubCI": {
+    "run": 43628772004,
+    "conclusion": "success"
+  },
+  "production": {
+    "status": 200,
+    "workers": 9,
+    "projects": 3,
+    "canvas": 2,
+    "consoleErrors": 0,
+    "verifiedControls": ["project selection", "supply delivery"]
+  },
+  "previews": ["animated GIF", "desktop", "mobile", "1200x630 social"],
+  "google": {
+    "sitemapSubmissionAccepted": true,
+    "homepageIndexingRequested": true,
+    "indexed": false
+  },
+  "bing": {
+    "verified": true,
+    "sitemapSubmissionAccepted": true,
+    "status": "Processing"
+  },
+  "indexNow": 202,
+  "compatibilityRule": {
+    "id": "eb240dafcf4c482ca07761107267dd34",
+    "ref": "builders_public_browser_compatibility",
+    "host": "builders.fluri.xyz",
+    "methods": ["GET", "HEAD"],
+    "excludedPathPrefixes": ["/api/", "/dashboard", "/internal/"],
+    "setting": {
+      "bic": false
+    }
+  }
+}
