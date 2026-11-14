@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-14",
+  "checkedAt": "2026-11-14T16:29:11.751873+00:00",
   "googleSitemapLiveTests": [
     {
       "url": "https://fluri.xyz/sitemap.xml",
@@ -22,15 +22,17 @@
       "crawlingAllowed": true
     }
   ],
-  "googleSitemapsReport": "Could not fetch; investigation found no XML or live-access failure. Pending provider processing.",
+  "googleSitemapsReport": "Master sitemap index: Success. All six individual sitemap reports still say Could not fetch after accepted submissions. Root cause unresolved; successful HTTP checks and earlier live fetch tests do not resolve this report.",
   "bing": {
     "verifiedSites": [
       "https://fluri.xyz/",
       "https://winter.fluri.xyz/",
       "https://spider.fluri.xyz/",
-      "https://grinch.fluri.xyz/"
+      "https://grinch.fluri.xyz/",
+      "https://cat.fluri.xyz/",
+      "https://ghost.fluri.xyz/"
     ],
-    "sitemaps": "All four successfully processed",
+    "sitemaps": "Master index and all six individual sitemaps successfully processed",
     "errors": 0,
     "sitemapResults": [
       {
@@ -60,26 +62,83 @@
         "discoveredPages": 1,
         "errors": 0,
         "warnings": 0
+      },
+      {
+        "host": "cat.fluri.xyz",
+        "success": true,
+        "discoveredPages": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "host": "ghost.fluri.xyz",
+        "success": true,
+        "discoveredPages": 1,
+        "errors": 0,
+        "warnings": 0
       }
-    ]
+    ],
+    "masterSitemap": {
+      "url": "https://fluri.xyz/sitemap-index.xml",
+      "status": "Success",
+      "discoveredSitemaps": 6,
+      "errors": 0,
+      "warnings": 0
+    }
   },
   "googleManualActions": "No issues detected",
   "googleResubmittedAfterLiveTests": [
     {
       "url": "https://fluri.xyz/sitemap.xml",
-      "accepted": true
+      "accepted": true,
+      "reportedStatus": "Could not fetch"
     },
     {
       "url": "https://winter.fluri.xyz/sitemap.xml",
-      "accepted": true
+      "accepted": true,
+      "reportedStatus": "Could not fetch"
     },
     {
       "url": "https://spider.fluri.xyz/sitemap.xml",
-      "accepted": true
+      "accepted": true,
+      "reportedStatus": "Could not fetch"
     },
     {
       "url": "https://grinch.fluri.xyz/sitemap.xml",
-      "accepted": true
+      "accepted": true,
+      "reportedStatus": "Could not fetch"
+    },
+    {
+      "url": "https://cat.fluri.xyz/sitemap.xml",
+      "accepted": true,
+      "reportedStatus": "Could not fetch"
+    },
+    {
+      "url": "https://ghost.fluri.xyz/sitemap.xml",
+      "accepted": true,
+      "reportedStatus": "Could not fetch"
+    }
+  ],
+  "googleMasterSitemap": {
+    "url": "https://fluri.xyz/sitemap-index.xml",
+    "submitted": true,
+    "status": "Success",
+    "discoveredPages": 0
+  },
+  "googleHomepageIndexingRequests": [
+    {
+      "url": "https://cat.fluri.xyz/",
+      "accepted": true,
+      "confirmation": "Indexing requested",
+      "indexed": false,
+      "indexStatusAtInspection": "URL unknown to Google"
+    },
+    {
+      "url": "https://ghost.fluri.xyz/",
+      "accepted": true,
+      "confirmation": "Indexing requested",
+      "indexed": false,
+      "indexStatusAtInspection": "URL unknown to Google"
     }
   ]
 }
